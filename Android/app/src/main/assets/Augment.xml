@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="20euVerso" size="133.000000 75.331200" />
+    <ImageTarget name="20euRecto" size="133.000000 71.120850" />
+    <ImageTarget name="5euVerso" size="120.000000 60.904522" />
+    <ImageTarget name="5euRecto" size="120.000000 63.516872" />
+    <ImageTarget name="10euVerso" size="127.000000 70.531517" />
+    <ImageTarget name="10eu-recto" size="127.000000 67.449760" />
+    <ImageTarget name="cdiscounttracker" size="148.000000 205.964218" />
+    <ImageTarget name="A3Tracker" size="420.000000 296.940002" />
+    <ImageTarget name="A4Tracker" size="297.000000 211.935226" />
+    <ImageTarget name="pocketTracker" size="85.000000 55.029881" />
+  </Tracking>
+</QCARConfig>

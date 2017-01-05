@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ACME Shop</string>
+    <string name="loading_">Loading ...</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="buy_action">Buy</string>
+    <string name="view_it_live_action">View it live</string>
+    <string name="permissions_READ_EXTERNAL_STORAGE">Augment needs reading permission to get 3D models from the SD Card</string>
+    <string name="permissions_WRITE_EXTERNAL_STORAGE">Augment needs writing permission to save 3D models on the SD Card</string>
+    <string name="permissions_CAMERA">Augment needs camera access to show you augmented reality</string>
+    <string name="help_action">\?</string>
+    <string name="center_action">Reset position</string>
+    <string name="screenshot_action">Take a screenshot</string>
+    <string name="screenshot_success">Your screenshot is ready to be shared</string>
+    <string name="share_action">Share</string>
+    <string name="screenshot_loading">Screenshot in progress…</string>
+    <string name="about_action">About</string>
+    <string name="about_message">This is a Demo App to show how to use the Augment SDK\nFind out more at https://augment.com/</string>
+    <string name="i_got_it_action">I got it!</string>
+    <string name="step_1_2">● ○</string>
+    <string name="step_2_2">○ ●</string>
+    <string name="default_AlertDialog_button">OK</string>
+</resources>

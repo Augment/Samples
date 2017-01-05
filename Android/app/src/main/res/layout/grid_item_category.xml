@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.augment.acmeshop.helpers.SquareLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4sp"
+    android:background="@color/colorBackground"
+    app:cardBackgroundColor="@color/colorBackground"
+    app:cardElevation="4sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/categoryImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="@color/colorBackground"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/categoryTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimaryAlpha8"
+            android:padding="5dp"
+            android:text="@string/placeholder"
+            android:textAlignment="center"
+            android:textColor="@color/colorBackground"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+
+    </RelativeLayout>
+
+</com.augment.acmeshop.helpers.SquareLayout>
