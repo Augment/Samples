@@ -1,0 +1,12 @@
+PODS:
+  - AugmentPlayerSDK (1.0.1)
+
+DEPENDENCIES:
+  - AugmentPlayerSDK (= 1.0.1)
+
+SPEC CHECKSUMS:
+  AugmentPlayerSDK: b7c38ac7b477cd0ce2c944fafaa583f3d8d46ed3
+
+PODFILE CHECKSUM: 17be6edbe6b9aaa7b65c4ce1e414d546b0372863
+
+COCOAPODS: 1.1.1

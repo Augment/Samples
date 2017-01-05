@@ -1,0 +1,49 @@
+### TERMS AND CONDITIONS
+
+## 1. SDK LICENSE AND SUPPORT
+
+Subject to the terms of this Agreement, Augment will use commercially reasonable efforts to provide Licensee the Services and Support as per Exhibit B.  
+
+
+## 2. RESPONSIBILITIES AND RESTRICTIONS
+
+Licensee is responsible for the complete SDK integration into the Licensee’s platform.
+Licensee is responsible for the associated creation of 3D models to be viewed in augmented reality.
+OR
+Augment will provide 3D models as outlined in Exhibit A.
+
+Within two (2) weeks following the Pilot, Licensee will review results with Augment, including but not limited to: impact on conversion rate, return rate, and customer engagement and browsing duration.
+Licensee will not, directly or indirectly: reverse engineer, decompile, disassemble or otherwise attempt to discover the underlying structure, ideas, know-how or algorithms relevant to the SDK, documentation or data related to the Services (“SDK”); modify, translate, or create derivative works based on the Services or any SDK (except to the extent expressly permitted by Augment or authorized within the Services).
+Licensee represents, covenants, and warrants that Licensee will use the Services only in compliance with the terms set forth in Exhibit A and all applicable laws and regulations.  
+
+
+## 3. CONFIDENTIALITY; PROPRIETARY RIGHTS
+
+Each party understands that the other party has disclosed or may disclose business, technical or financial information relating to the Disclosing Party’s business (hereinafter referred to as “Proprietary Information” of the Disclosing Party).  Proprietary Information of Augment includes non-public information regarding features, functionality and performance of the Service.  Proprietary Information of Licensee includes non-public data provided by Licensee to Augment to enable the provision of the Services (“Licensee Data”). The Receiving Party agrees: (i) to take reasonable precautions to protect such Proprietary Information, and (ii) not to use (except in performance of the Services or as otherwise permitted herein) or divulge to any third person any such Proprietary Information.  The Disclosing Party agrees that the foregoing shall not apply with respect to any information after five (5) years following the disclosure thereof or any information that the Receiving Party can document (a) is or becomes generally available to the public, or (b) was in its possession or known by it prior to receipt from the Disclosing Party, or (c) was rightfully disclosed to it without restriction by a third party, or (d) was independently developed without use of any Proprietary Information of the Disclosing Party or (e) is required to be disclosed by law.  
+Notwithstanding anything to the contrary, Augment shall have the right to collect and analyze data and other information relating to the provision, use and performance of various aspects of the Services and related systems and technologies (including, without limitation, information concerning Licensee Data and data derived there from), and  Augment will be free (during and after the term hereof) to (i) use such information and data to improve and enhance the Services and for other development, diagnostic and corrective purposes in connection with the Services and other Augment offerings, and (ii) disclose such data solely in aggregate or other de-identified form in connection with its business.  No rights or licenses are granted except as expressly set forth herein.   
+
+
+## 4. PAYMENT OF FEES
+
+Licensee will pay Augment the applicable fees, if any, as described in Exhibit A. If Licensee believes that Augment has billed Licensee incorrectly, Licensee must contact Augment no later than 60 days after the closing date on the first billing statement in which the error or problem appeared, in order to receive an adjustment or credit.
+Augment may choose to bill through an invoice, in which case, full payment for invoices issued in any given month must be received by Augment thirty (30) days after the mailing or emailing date of the invoice.  Unpaid amounts are subject to a finance charge of 1.5% per month on any outstanding balance, or the maximum permitted by law, whichever is lower, plus all expenses of collection and may result in immediate termination of Service.
+
+
+## 5. TERM AND TERMINATION
+
+If Licensee decides to not purchase an SDK subscription following the Pilot, Licensee agrees to remove all Augment SDK code and associated content from the app or website platform where it was integrated, within one (1) week after the review with Augment.  
+Either party may terminate this Agreement if the other party materially breaches any of the terms or conditions of this Agreement.  All sections of this Agreement which by their nature should survive termination will survive termination, including, without limitation, confidentiality obligations, warranty disclaimers, and exclusion of liability.
+Augment reserves the right to revoke Licensee access to the SDK for any reason by deactivating the unique keys given to Licensee.
+
+
+
+## 6. EXCLUSION OF LIABILITY
+
+AUGMENT IS NOT RESPONSIBLE OR LIABLE FOR ANY LOSSES AND EXPENSES OF ANY NATURE AND HOWSOEVER ARISING INCLUDING, WITHOUT LIMITATION TO, ANY DIRECT, INDIRECT, GENERAL, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES, LOSS OF USE, LOSS OF DATA, LOSS CAUSED BY A VIRUS, LOSS OF INCOME OR PROFIT, LOSS OR DAMAGE TO PROPERTY, OR OTHER LOSSES OF ANY KIND OR CHARACTER.
+
+
+## 7. MISCELLANEOUS
+
+If any any provision of this Agreement is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that this Agreement will otherwise remain in full force and effect and enforceable.  This Agreement is not assignable, transferable or sub-licensable by Licensee except with Augment’s prior written consent.  Augment may transfer and assign any of its rights and obligations under this Agreement without consent.  This Agreement is the complete and exclusive statement of the mutual understanding of the parties and supersedes and cancels all previous written and oral agreements, communications and other understandings relating to the subject matter of this Agreement, and that all waivers and modifications must be in a writing signed by both parties, except as otherwise provided herein.  No agency, partnership, joint venture, or employment is created as a result of this Agreement and Licensee does not have any authority of any kind to bind Augment in any respect whatsoever.
+All 3D models created or configured by Augment and included in Augment’s Product Database are owned by Augment. Augment reserves the right to license any 3D models in the Database to other parties.
+Should the Pilot result in a paid subscription, the parties shall work together in good faith to issue at least one mutually agreed upon press release within 90 days of the Effective Date of the new contract, and Licensee otherwise agrees to reasonably cooperate with Augment to serve as a reference account upon request.

@@ -1,0 +1,6 @@
+framework module AugmentPlayerSDK {
+  umbrella header "AugmentPlayerSDK.h"
+
+  export *
+  module * { export * }
+}
