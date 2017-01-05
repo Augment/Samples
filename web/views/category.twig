@@ -1,0 +1,65 @@
+{% extends "page.twig" %}
+{% set base_path = url('root') %}
+
+{% block javascript %}
+{{ parent() }}
+<script>
+var listing = false;
+$('.listing-vs-squared-action').on('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    // Action
+    $('.listing-vs-squared-action').html(!listing ? '⊞&nbsp;Square view' : '≡&nbsp;List view');
+    $('.listing-vs-squared').toggle();
+    listing = !listing;
+
+    return false;
+});
+</script>
+{% endblock %}
+
+{% block page %}
+<div class="row">
+    <h3 class="title-important">{{ category.title }}</h3>
+    <a href="#" class="listing-vs-squared-action hidden-xs" style="color:darkred;">≡&nbsp;List view</a>
+    <div class="row">
+        <div class="listing-vs-squared display-md-block">
+            {% for product in products %}
+            <div class="col-xs-6 col-sm-6 col-md-3 product-block">
+                <a href="{{ url('product', {id: product.id, slug: product.slug}) }}">
+                    <img src="{{ base_path }}images/{{ product.picture }}.png">
+                    <p style="text-align: left;">
+                        {{ product.title }}<br>
+                        <strong>{{ product.formatedPrice }}</strong>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="listing-vs-squared hidden-xs" style="display:none">
+            {% for product in products %}
+            <div class="col-xs-12" style="padding-bottom:10px;margin-bottom:10px;border-bottom:solid #DDD 1px;">
+                <div class="col-xs-3">
+                    <a href="{{ url('product', {id: product.id, slug: product.slug}) }}">
+                        <img style="max-width:100%;width:100%;" class="media-object" src="{{ base_path }}images/{{ product.picture }}.png" alt="{{ product.title }} image">
+                    </a>
+                </div>
+                <div class="col-xs-5">
+                    <a href="{{ url('product', {id: product.id, slug: product.slug}) }}">
+                        <h4 class="media-heading">{{ product.title }}</h4>
+                    </a>
+                    <p>
+                        {{ product.getDetailsTruncated(200) }}
+                    </p>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="button button-shop">Add to Basket</a>
+                    <a href="#" class="button button-augment">Visualize this product in your home</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

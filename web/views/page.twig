@@ -1,0 +1,47 @@
+{% extends "template.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ base_path }}styles/main.css">
+{% endblock %}
+
+{% block javascript %}
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="padding-bottom: 20px;">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="page-header" style="text-align:center;">
+                <a href="{{ base_path }}">
+                    <img class="header-image" style="min-width:100%" src="{{ base_path }}images/acmeshop/header_top.png">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12">
+            <div class="col-xs-12 hidden-xs hidden-sm col-sm-12 col-md-3 category-menu">
+                <h5>Good Deals</h5>
+                <ul>
+                    <li><a href="{{ base_path }}">Sales</a></li>
+                    <li><a href="{{ base_path }}">Last Chances</a></li>
+                    <li><a href="{{ base_path }}">On Line</a></li>
+                </ul>
+                <h5>Categories</h5>
+                <ul>
+                    {% for category in categories %}
+                    <li><a href="{{ url('category', {id: category.id, slug: category.slug}) }}">{{ category.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                {% block page %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container" style="background:#AA60B5; text-align:center;">
+        <img class="header-image" src="{{ base_path }}images/acmeshop/footer.png">
+    </div>
+</footer>
+{% endblock %}

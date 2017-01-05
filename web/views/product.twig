@@ -1,0 +1,111 @@
+{% extends "page.twig" %}
+{% set base_path = url('root') %}
+
+{% block javascript %}
+{{ parent() }}
+<script>
+/* Please copy/past the snippet from https://cdn.augment.com/web-sdk/0.2/snippet.js here */
+{{ snippet | raw }}
+var url;
+var product = {
+    ean: "{{ product.ean }}",
+    brand: "{{ product.brand }}",
+    name: "{{ product.name }}",
+    identifier: "{{ product.identifier }}"
+};
+var options = {
+    desktopFallbackURL: "{{ url("fallback", {type: "desktop", id: product.id}) }}",
+    mobileFallbackURL: "{{ url("fallback", {type: "mobile", id: product.id}) }}"
+};
+augment.initDeeplinkForProduct(product, options, function (err, deeplink) {
+    if (err) {
+        console.log(err.message)
+    }
+    else {
+        deeplink.applicationLink(function(err, result) {
+            url = result.url;
+            show();
+        });
+    }
+});
+
+function show() {
+    $('.button-augment').show();
+    setTimeout(function () {$('.button-augment-bubble').fadeIn();},  0.5*1000);
+    setTimeout(function () {$('.button-augment-bubble').fadeOut();}, 3.5*1000);
+}
+
+function go() {
+    if (!url) {
+        setTimeout(function() { go(); }, 500);
+        return;
+    }
+    document.location = url;
+}
+
+$('.button-augment').on('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    go();
+    return false;
+});
+</script>
+{% endblock %}
+
+{% block page %}
+<h2>{{ product.title }}</h2>
+<div class="col-xs-12 col-sm-6">
+    <div class="row">
+        <div class="product-block-image">
+            <img src="{{ base_path }}images/{{ product.picture }}.png" alt="{{ product.title }} image">
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 col-sm-6">
+    <div class="row">
+        <div class="product-block-action" style="margin-bottom:0;">
+            Buy on line<br>
+            <strong>{{ product.formatedPrice }}</strong>
+        </div>
+        <div class="button-container">
+            <div class="row">
+                <div class="col-xs-4 col-md-4">
+                    quantity: 1
+                </div>
+                <div class="col-xs-8 col-md-8">
+                    <a href="#" class="button button-shop">Add To Basket</a>
+                    <a href="#" class="button button-augment" style="display:none;">
+                        Try before buying
+                        <span class="button-augment-bubble" style="display:none">
+                            <b>New:</b><br>
+                            Try this product at home in Augmented reality
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="product-block-action" style="margin-top:0;">
+            <small style="float:right"><a href="#">see conditions</a></small>
+            Shipping included
+        </div>
+    </div>
+</div>
+<div class="col-xs-12">
+    <div class="row">
+        <div class="product-details">
+            <h4 style="padding-left:10px">Details</h4>
+            <p>
+                {{ product.details }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 hidden-xs">
+    <div class="row">
+        <div style="margin:10px;">
+            <h4>Customers Who Bought This Item Also Bought</h4>
+            <a href="{{ url('category', {id: 2, slug: "ordinateurs_portables_tablettes"}) }}"><img style="width:100%;max-width100%;" src="{{ base_path }}images/acmeshop/see_also.png"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

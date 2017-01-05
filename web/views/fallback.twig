@@ -1,0 +1,139 @@
+{% extends "page.twig" %}
+{% set base_path = url('root') %}
+
+{% block css %}
+{{ parent() }}
+<style>
+.visible-isMobile, .visible-not-isMobile {
+    display: none;
+}
+</style>
+{% endblock %}
+
+{% block javascript %}
+{{ parent() }}
+<script>
+/* Please copy/past the snippet from https://cdn.augment.com/web-sdk/0.2/snippet.js here */
+{{ snippet | raw }}
+//var isMobile = /Android|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent);
+var isMobile = !("{{ type }}" == "desktop");
+
+if (isMobile) {
+    $('.visible-isMobile').show();
+} else {
+    $('.visible-not-isMobile').show();
+}
+
+var url;
+augment.initDeeplinkOnFallbackPage(function (err, deeplink) {
+    if (err) {
+        console.log(err.message)
+    } else {
+        if (!isMobile) {
+            deeplink.generateQRCode(document.getElementById('qr-code'), { size: 180 });
+        }
+
+        deeplink.applicationLink(function(err, result) {
+            url = result.url;
+        });
+    }
+});
+
+function go() {
+    if (!url) {
+        setTimeout(function() { go(); }, 500);
+        return;
+    }
+    document.location = url;
+}
+
+$('.button-augment-action').on('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    go();
+});
+
+$('.action-send-sms').on('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    var phone = $('#phone-number').val();
+    if (!phone || phone.length <= 0) return;
+    // Auto-convert to French number if needed
+    // This code works with all phone number but it has to follow the internationnal notation
+    // including the contry prefix. Here is an example of a trick for French number (+33)
+    phone = phone.replace(/^0([1-9])/, "+33$1");
+    augment.sendSMS(phone, function (v) {
+        $('.successfully-sent-message').show();
+        $('.action-send-sms').prop('disabled', true);
+    });
+});
+</script>
+{% endblock %}
+
+{% block page %}
+<div class="row">
+    <div class="col-xs-12">
+        <h2 style="margin-top:0;text-align:center">{{ product.title }}</h2>
+        <div style="text-align:center;padding:0px 20px 30px 20px;">
+            <h3 style="font-size:20px">Be sure of what you're getting!</h3>
+            <div class="download-augment" style="font-size:98%">
+                With augmented reality, try the product as if it was in your home, with the real dimensions, thanks to the free Augment application.
+            </div>
+        </div>
+
+        {# MOBILE VERSION #}
+
+        <div class="download-augment visible-xs-block- visible-isMobile">
+            <div class="row" style="text-align:center;padding-bottom: 30px;">
+                <a href="#" class="button-augment-action" style="font-size:16px;display:inline-block;padding:8px 20px;color:white;background:#E23423;border-radius:5px">
+                    Download Augment
+                </a><br>
+                <small>Available on Android and iOS</small>
+            </div>
+        </div>
+
+        {# DESKTOP VERSION #}
+
+        <div class="download-augment hidden-xs- visible-not-isMobile">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p style="padding:10px 0">
+                        <strong>Only one step!</strong><br>
+                        Get a link to download the app by SMS.<br>
+                        As soon as the application is installed you will see this product in 3D in your home!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" style="text-align:center;padding-bottom:30px;">
+                    <div class="sms-form form-inline">
+                        <div class="form-group">
+                            <input class="form-control phone-number" id="phone-number" name="phone-number" placeholder="phone number" type="tel">
+                        </div>
+                        <button class="btn btn-primary action-send-sms" style="background:#E23423;border-color:#E23423">
+                            <span class="send-link-text">Send the link</span>
+                        </button>
+                        <div class="error text-danger unsuccessfully-sent-message" style="display:none">The phone number is wrong</div>
+                        <div class="success text-success successfully-sent-message" style="display:none">A download link has just been sent to you!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {# COMMON #}
+
+        <div class="download-augment">
+            <img style="max-width: 100%; width: 100%" src="{{ base_path }}images/augment_preview.jpg" /><br>
+        </div>
+
+        {# DESKTOP VERSION : USER HAS THE APP ALREADY #}
+
+        <div class="row">
+            <div class="hidden-xs- visible-not-isMobile col-xs-9 col-xs-offset-1" style="text-align:center;padding:10px 0;">
+                <h4>Scan this QRCode to see this product!</h4>
+                <div id="qr-code" style="display:inline-block"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
