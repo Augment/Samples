@@ -16,6 +16,10 @@ struct Colors {
     static let Foreground    = UIColor(fromHex: "111111")
 }
 
+struct Dim {
+    static let RadiusButton = CGFloat(10)
+}
+
 extension UIColor {
     convenience init(fromHex: String) {
         let hex = fromHex.replacingOccurrences(of: "#", with: "")

@@ -27,6 +27,10 @@ struct Product {
         }
     }
     
+    var image: UIImage? {
+        return UIImage(named: ean) ?? UIImage(named: picture)
+    }
+    
     /**
      * The identifier is used to query Augment database,
      * here we are using the internal id and convert that to a string

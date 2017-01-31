@@ -17,6 +17,10 @@ struct Category {
     let title: String
     let picture: String
     
+    var image: UIImage? {
+        return UIImage(named: picture)
+    }
+    
     /**
      * This will give the full Category list,
      * in a real app it could be an asynchronous query over the network.
@@ -25,7 +29,7 @@ struct Category {
      * @return Array of Category
      */
     static func GetCategories() -> [Category] {
-        return data.categories.map { $1 }
+        return data.categories.sorted { $0.0.key < $0.1.key }.map { $1 }
     }
     
     /**

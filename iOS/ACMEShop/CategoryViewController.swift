@@ -21,7 +21,7 @@ class CategoryViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
-            collectionView.delegate = self
+            collectionView.delegate   = self
             collectionView.dataSource = self
             collectionView.alwaysBounceVertical = true
         }
@@ -31,7 +31,7 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "ACMEShop"
         navigationController?.navigationBar.barTintColor = Colors.Primary
-        navigationController?.navigationBar.tintColor = Colors.Background
+        navigationController?.navigationBar.tintColor    = Colors.Background
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -112,17 +112,21 @@ extension CategoryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath)
+        
         let category = categories[indexPath.row]
-        let pictureView = cell.viewWithTag(1) as! UIImageView
-        let titleView = cell.viewWithTag(2) as! UILabel
         
-        cell.viewWithTag(3)?.backgroundColor = Colors.PrimaryAlpha8
+        let pictureView    = cell.viewWithTag(1) as! UIImageView
+        let titleView      = cell.viewWithTag(2) as! UILabel
+        let blurBackground = cell.viewWithTag(3) as! UIVisualEffectView
         
-        pictureView.image = UIImage(named: category.picture)
-        pictureView.layer.borderWidth = 1
-        pictureView.layer.borderColor = Colors.Primary.cgColor
-        titleView.text = category.title
-        
+        pictureView.image = category.image
+        titleView.text    = category.title
+        blurBackground.backgroundColor = Colors.PrimaryAlpha8
+
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = Colors.Primary.cgColor
+        cell.cornerRadius = Dim.RadiusButton
+
         return cell
     }
 }
@@ -136,3 +140,16 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+extension UIView {
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set(newValue) {
+            layer.cornerRadius = newValue
+            clipsToBounds = newValue > 0
+        }
+    }
+}
+

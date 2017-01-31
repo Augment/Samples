@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020D64F21E09654000552133 /* ACMEShop.swift-dist in Resources */ = {isa = PBXBuildFile; fileRef = 020D64F11E09654000552133 /* ACMEShop.swift-dist */; };
 		0234D1941DAF7BFB00ED0202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0234D1931DAF7BFB00ED0202 /* AppDelegate.swift */; };
 		0234D1991DAF7BFB00ED0202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0234D1971DAF7BFB00ED0202 /* Main.storyboard */; };
 		0234D19B1DAF7BFB00ED0202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0234D19A1DAF7BFB00ED0202 /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		020D64F11E09654000552133 /* ACMEShop.swift-dist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ACMEShop.swift-dist"; sourceTree = "<group>"; };
 		0234D1901DAF7BFB00ED0202 /* ACMEShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACMEShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0234D1931DAF7BFB00ED0202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0234D1981DAF7BFB00ED0202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,9 +102,8 @@
 				0234D1C31DAF7C3A00ED0202 /* Models */,
 				0234D1C21DAF7C2F00ED0202 /* Views */,
 				0234D1C11DAF7C2600ED0202 /* Controllers */,
-				02C356301E13CF2A008B68B0 /* Colors.swift */,
 				02B137AB1DAF99C000C51480 /* ACMEShop.swift */,
-				020D64F11E09654000552133 /* ACMEShop.swift-dist */,
+				02C356301E13CF2A008B68B0 /* Colors.swift */,
 				02B137B21DAFE74700C51480 /* ACMEShop-Bridging-Header.h */,
 				0234D1931DAF7BFB00ED0202 /* AppDelegate.swift */,
 				0234D19A1DAF7BFB00ED0202 /* Assets.xcassets */,
@@ -244,7 +241,6 @@
 				02B137C41DB102D200C51480 /* Augment.xml in Resources */,
 				0234D19E1DAF7BFB00ED0202 /* LaunchScreen.storyboard in Resources */,
 				0234D19B1DAF7BFB00ED0202 /* Assets.xcassets in Resources */,
-				020D64F21E09654000552133 /* ACMEShop.swift-dist in Resources */,
 				0234D1991DAF7BFB00ED0202 /* Main.storyboard in Resources */,
 				02B137C31DB102D200C51480 /* Augment.dat in Resources */,
 			);
