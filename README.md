@@ -10,7 +10,6 @@ To get started with the Android Sample it is quite easy:
  - Edit the `com/augment/acmeshop/ACMEShop.java` file and add in your credentials
  - Build the App (on a real device) and you're ready to go!
 
-
 ## Get started with iOS
 
 To get started with the iOS Sample it is quite easy:
@@ -20,26 +19,6 @@ To get started with the iOS Sample it is quite easy:
  - Build the App (on a real device) and you're ready to go!
  
 Note: As you may see we use Cocoapods but we decided to include it in the repo so you don't have to worry about this.
-If you want you can update it.
-
-## Get started with the web
-
-The Web sample uses [Silex](http://silex.sensiolabs.org) micro-framework, it is a PHP framework based on Symfony.
-
-In the end it is not very important as our SDK is only in Javascript. You should only look into these two important files
-
-- `web/views/product.twig`
-- `web/views/fallback.twig`
-
-It uses the Twig templating engine but you can read it as basic HTML.
-
-With this in mind, get started with the Web sample it is quite easy:
-
- - Open `web` directory with your favorite editor
- - Edit the `config.php`file and add in your credentials
- - Start the PHP server with `php -S 127.0.0.1:4001` in the `web/www` directory and navigate to <u>http://localhost:4001</u>
- 
- Note: As you may see we use composer but we decided to include it in the repo so you don't have to worry about this.
 If you want you can update it.
 
 # Feedbacks
