@@ -16,7 +16,9 @@
     <string name="about_action">About</string>
     <string name="about_message">This is a Demo App to show how to use the Augment SDK\nFind out more at https://augment.com/</string>
     <string name="i_got_it_action">I got it!</string>
-    <string name="step_1_2">● ○</string>
-    <string name="step_2_2">○ ●</string>
+    <string name="step_1_4">● ○ ○ ○</string>
+    <string name="step_2_4">○ ● ○ ○</string>
+    <string name="step_3_4">○ ○ ● ○</string>
+    <string name="step_4_4">○ ○ ○ ●</string>
     <string name="default_AlertDialog_button">OK</string>
 </resources>

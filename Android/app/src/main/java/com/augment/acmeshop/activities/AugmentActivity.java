@@ -97,7 +97,13 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
                 LayoutInflater inflater = LayoutInflater.from(AugmentActivity.this);
-                ViewGroup layout = (ViewGroup) inflater.inflate(position == 0 ? R.layout.tutorial_screen_01 : R.layout.tutorial_screen_02, container, false);
+                int layoutId = R.layout.tutorial_screen_01;
+                switch (position) {
+                    case 1: layoutId = R.layout.tutorial_screen_02; break;
+                    case 2: layoutId = R.layout.tutorial_screen_03; break;
+                    case 3: layoutId = R.layout.tutorial_screen_04; break;
+                }
+                ViewGroup layout = (ViewGroup) inflater.inflate(layoutId, container, false);
                 container.addView(layout);
                 return layout;
             }
@@ -109,7 +115,7 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
 
             @Override
             public int getCount() {
-                return 2;
+                return 4;
             }
 
             @Override
@@ -124,13 +130,14 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
 
             @Override
             public void onPageSelected(int position) {
-                if (position == 0) {
-                    iGotItButton.setVisibility(View.GONE);
-                    pagerTextView.setText(R.string.step_1_2);
-                }
-                else {
-                    iGotItButton.setVisibility(View.VISIBLE);
-                    pagerTextView.setText(R.string.step_2_2);
+                iGotItButton.setVisibility(View.GONE);
+                switch (position) {
+                    case 0: pagerTextView.setText(R.string.step_1_4); break;
+                    case 1: pagerTextView.setText(R.string.step_2_4); break;
+                    case 2: pagerTextView.setText(R.string.step_3_4); break;
+                    case 3: pagerTextView.setText(R.string.step_4_4);
+                        iGotItButton.setVisibility(View.VISIBLE);
+                        break;
                 }
             }
 

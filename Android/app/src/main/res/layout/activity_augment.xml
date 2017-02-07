@@ -132,7 +132,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="@string/step_1_2" />
+            android:text="@string/step_1_4" />
 
     </LinearLayout>
 
