@@ -344,8 +344,7 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
 
             case R.id.centerAction:
                 if (augmentPlayerSDK == null) return;
-                // TODO this does not exist for now
-                //augmentPlayerSDK.getAugmentPlayer()...
+                augmentPlayerSDK.getAugmentPlayer().recenterProducts();
                 break;
 
             case R.id.iGotItButton:
