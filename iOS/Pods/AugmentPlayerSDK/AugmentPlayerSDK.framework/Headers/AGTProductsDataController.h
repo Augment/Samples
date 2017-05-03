@@ -34,11 +34,11 @@ typedef void (^AGTProductQueryCompletionBlock)(AGTProduct *_Nullable product, NS
 /**
  *  makes a chain of network requests to Augment webservice in order to check if model in-demand does exist
  *
- *  @param productID  identifier of the product whose model 3D asset to be queried in your product catalog
- *  @param brand  brand/manufacturer of the requested product
- *  @param name   complete commercial name of the requested product
- *  @param EAN    optionnal ean of the requested product
- *  @param completion completion block to be executed at the end of network request. runs in MAIN thread.
+ *  @param productIdentifier  identifier of the product whose model 3D asset to be queried in your product catalog
+ *  @param brand              brand/manufacturer of the requested product
+ *  @param name               complete commercial name of the requested product
+ *  @param ean                optionnal ean of the requested product
+ *  @param completion         completion block to be executed at the end of network request. runs in MAIN thread.
  *          -product if productEAN does exist in Augment database, newly created AGTProduct object; otherwise nil
  *          -error   error object that occurred during network request, nil if no error occurred
  *

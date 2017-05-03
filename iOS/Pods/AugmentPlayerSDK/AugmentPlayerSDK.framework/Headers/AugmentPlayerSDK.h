@@ -16,6 +16,7 @@ FOUNDATION_EXPORT const unsigned char AugmentPlayerSDKVersionString[];
 
 #import "AGTAugmentSDK.h"
 #import "AGTError.h"
+#import "AGTAPIErrors.h"
 
 #pragma mark - Basic components
 

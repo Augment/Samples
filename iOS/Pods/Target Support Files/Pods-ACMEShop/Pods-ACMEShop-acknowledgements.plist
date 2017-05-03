@@ -64,6 +64,8 @@ If any any provision of this Agreement is found to be unenforceable or invalid, 
 All 3D models created or configured by Augment and included in Augment’s Product Database are owned by Augment. Augment reserves the right to license any 3D models in the Database to other parties.
 Should the Pilot result in a paid subscription, the parties shall work together in good faith to issue at least one mutually agreed upon press release within 90 days of the Effective Date of the new contract, and Licensee otherwise agrees to reasonably cooperate with Augment to serve as a reference account upon request.
 </string>
+			<key>License</key>
+			<string>AugmentPlayerSDK</string>
 			<key>Title</key>
 			<string>AugmentPlayerSDK</string>
 			<key>Type</key>

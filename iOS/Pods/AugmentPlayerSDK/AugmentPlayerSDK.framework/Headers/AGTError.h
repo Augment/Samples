@@ -33,6 +33,10 @@ NS_ENUM(NSInteger) {
      */
     AGTAugmentPlayerErrorInitializationError = -100,
     /**
+     *  error occurred during accessing the camera
+     */
+    AGTAugmentPlayerErrorCameraNotAccessible = -101,
+    /**
      *  error occurred during adding a model to Augment Player
      */
     AGTAugmentPlayerErrorInvalidModelToAdd = -200,

@@ -1,12 +1,12 @@
 PODS:
-  - AugmentPlayerSDK (1.0.1)
+  - AugmentPlayerSDK (1.2.2)
 
 DEPENDENCIES:
-  - AugmentPlayerSDK (= 1.0.1)
+  - AugmentPlayerSDK (= 1.2.2)
 
 SPEC CHECKSUMS:
-  AugmentPlayerSDK: b7c38ac7b477cd0ce2c944fafaa583f3d8d46ed3
+  AugmentPlayerSDK: 1f4d97404a4431a47fc44887ebf8af507a1f8bf4
 
-PODFILE CHECKSUM: 17be6edbe6b9aaa7b65c4ce1e414d546b0372863
+PODFILE CHECKSUM: c98018a573f984466e7a6d5c9a2d1118406119a2
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

@@ -10,67 +10,39 @@
 		</data>
 		<key>Headers/AGTAugmentPlayer.h</key>
 		<data>
-		wdfV8Eoof2YBJKXoQjEQlLAcdhA=
+		cvVz/l5dH9hMZ0ON4n+RLger/UY=
 		</data>
 		<key>Headers/AGTAugmentSDK.h</key>
 		<data>
-		Kajq9futQlyBXa42oL9/2Q70g0k=
+		rlP5rlP4DkuevahLxW/ls9OZbIU=
 		</data>
 		<key>Headers/AGTBlocks.h</key>
 		<data>
-		AOBxsIoosH5FgUW4GFpf8YaI/bI=
+		iJoaKqDYA85b27F0Bl/CnoJlFo0=
 		</data>
 		<key>Headers/AGTDevice.h</key>
 		<data>
 		HH+8yMOtUneQiMYY266Ki9EYxPY=
 		</data>
-		<key>Headers/AGTDimension.h</key>
-		<data>
-		jkRjOfF6SLMyuZx3S9tMxeVkkgU=
-		</data>
-		<key>Headers/AGTDisplayConfiguration.h</key>
-		<data>
-		dyPTROZBxge5f9Ikg8VHcPGbyxI=
-		</data>
 		<key>Headers/AGTError.h</key>
 		<data>
-		ry04zzJQKKzPPsR+9kkJZYw6O0E=
-		</data>
-		<key>Headers/AGTExternalReference.h</key>
-		<data>
-		T5WM6rkRZMDJrPS2DgKjPwUY2Vc=
-		</data>
-		<key>Headers/AGTFolder.h</key>
-		<data>
-		uU2rc5dHc/lwypnMjnMAoa3ikos=
-		</data>
-		<key>Headers/AGTGallery.h</key>
-		<data>
-		z+Yz9xmn+t8wCTiqxDmikUPhms4=
-		</data>
-		<key>Headers/AGTMaterial.h</key>
-		<data>
-		h66j2xpfJY+7qhURhM4khiJopLk=
+		XA29xdTD4UHxFwLl8MSFfNB+PhY=
 		</data>
 		<key>Headers/AGTModel3D.h</key>
 		<data>
-		shUEFGcGvCsQ/TAqQQKJNPgo37A=
+		ooWRmNgQTVGEKuHkonETZJd1aXo=
 		</data>
-		<key>Headers/AGTNetworkManager.h</key>
+		<key>Headers/AGTModel3DDataController.h</key>
 		<data>
-		WBTfzo+YW8+PKOzCuQtamcyda8g=
-		</data>
-		<key>Headers/AGTOAuthCredential.h</key>
-		<data>
-		N6sz9Hh/VDkNJeHkMKRX7C5yP1o=
+		As50UPWg4k4kmEpqdtvjVJjwNME=
 		</data>
 		<key>Headers/AGTProduct.h</key>
 		<data>
-		lDrRUVKkQxzw7yMIp1eF++OAA1c=
+		Eqean5M5rGA5lZdN2kLZOulOXcc=
 		</data>
 		<key>Headers/AGTProductsDataController.h</key>
 		<data>
-		Xwfyfw99BI+7l6gc9B5W3CI2xS4=
+		F/0kh6DaJTgbONIdkymu40DxCrY=
 		</data>
 		<key>Headers/AGTTargetConditionals.h</key>
 		<data>
@@ -80,77 +52,69 @@
 		<data>
 		TbIUSHwV6UsexTMz4HbzWFbn/Is=
 		</data>
-		<key>Headers/AGTThumbnail.h</key>
-		<data>
-		I4Jj9D7fKL8PxGElDhlTdu1/lo8=
-		</data>
-		<key>Headers/AGTTokenPersistenceController.h</key>
-		<data>
-		8gcAd+BWhQW8zZBdIfTNhb8Ta3I=
-		</data>
-		<key>Headers/AGTTokenStorage.h</key>
-		<data>
-		UOqPuDYQx6tKUlPVD5FhGLQjG7Q=
-		</data>
-		<key>Headers/AGTUserSignInRequest.h</key>
-		<data>
-		ke+L0r8n7OCaPXoDo4wmpjitc6Y=
-		</data>
-		<key>Headers/AGTUserSignInResponse.h</key>
-		<data>
-		BOxOXbTln+iVnka6j9NJZyuHdMU=
-		</data>
 		<key>Headers/AGTView.h</key>
 		<data>
-		/VepqoPJUwOfqqTMfC/kbzndevM=
-		</data>
-		<key>Headers/AGTWebAPI+ExternalReferences.h</key>
-		<data>
-		8qKOFrVUBdVm83bx0f+5O5O3zkk=
-		</data>
-		<key>Headers/AGTWebAPI+Folders.h</key>
-		<data>
-		Kyit0TpMDMGKPsEzO4F0gyuW3o4=
-		</data>
-		<key>Headers/AGTWebAPI+Galleries.h</key>
-		<data>
-		OtBGVhyWejICF8v5tIM6cL0Atus=
-		</data>
-		<key>Headers/AGTWebAPI+Model3Ds.h</key>
-		<data>
-		oZIapjySrIA22hkVecJnyzs0NvA=
-		</data>
-		<key>Headers/AGTWebAPI+Products.h</key>
-		<data>
-		iC9nvn33jXjmKVqvWLLu9md2/Ks=
-		</data>
-		<key>Headers/AGTWebAPI+UserSession.h</key>
-		<data>
-		ewpOEPSaSpewyzmeFzUHozvhIx4=
-		</data>
-		<key>Headers/AGTWebAPI.h</key>
-		<data>
-		GqfU7QBafr/J6kV1MfW72obcyyo=
+		e4S5ZcZKPA9SWi0RfnauQieYQ9Q=
 		</data>
 		<key>Headers/AugmentPlayerSDK.h</key>
 		<data>
-		8dKhTPOwXKOoqIMFGu2jAWk9o5Q=
+		oq9fdpCx+87uSm6VNFjNl7TxoPI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		I4nDrdoRb/NjG4dAluaCPlWmrIs=
+		k8YOPqaGMJ0JbY8rMutIZ2vrVlg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		/D57yfwWBVv7ZO4ujnY1KR9ZMVM=
 		</data>
+		<key>PrivateHeaders/AGTAnalyticsManager.h</key>
+		<data>
+		rn6gJv05Gj4r+iTk/mDGg1xtO6c=
+		</data>
+		<key>PrivateHeaders/AGTAnalyticsSession.h</key>
+		<data>
+		HAbCLhX8i7l8X3UcEriCBU8+PqM=
+		</data>
+		<key>PrivateHeaders/AGTAnalyticsSessionStorage.h</key>
+		<data>
+		IAaViQ1DwMUuPqABSc5KeQI9z9k=
+		</data>
+		<key>PrivateHeaders/AGTAssetsPathProvider.h</key>
+		<data>
+		a5PTTfo+85VKH7W5gXCfKah/sM4=
+		</data>
+		<key>PrivateHeaders/AGTAugmentPlayer+Notifications.h</key>
+		<data>
+		wQjyxEceDfF9XegrqlrYGFW2N44=
+		</data>
 		<key>PrivateHeaders/AGTAugmentPlayer+Private.h</key>
 		<data>
-		f/m11xvDAKmmURCoUChSFcQGvWE=
+		XW/diezZSGncLzs+Z2RUyaG3iw4=
 		</data>
 		<key>PrivateHeaders/AGTAugmentSDK+Private.h</key>
 		<data>
-		RyMDhbR/4qNcGi56+gIUET+TfXg=
+		eXFLzPkq6BKRppcxl3Ou/ineRQY=
+		</data>
+		<key>PrivateHeaders/AGTDimension.h</key>
+		<data>
+		jkRjOfF6SLMyuZx3S9tMxeVkkgU=
+		</data>
+		<key>PrivateHeaders/AGTDisplayConfiguration.h</key>
+		<data>
+		dyPTROZBxge5f9Ikg8VHcPGbyxI=
+		</data>
+		<key>PrivateHeaders/AGTExternalReference.h</key>
+		<data>
+		u07PLOP+fKu6Je+HRiTYmjzwh4Y=
+		</data>
+		<key>PrivateHeaders/AGTFolder.h</key>
+		<data>
+		8HqCvbcUoxTP89KBx2fCIkIx6VM=
+		</data>
+		<key>PrivateHeaders/AGTGallery.h</key>
+		<data>
+		z+Yz9xmn+t8wCTiqxDmikUPhms4=
 		</data>
 		<key>PrivateHeaders/AGTJSONMapper.h</key>
 		<data>
@@ -160,9 +124,89 @@
 		<data>
 		p0QSKQcevcTdMI4GCuKRo3LNXaU=
 		</data>
-		<key>PrivateHeaders/AGTModel3DDataController.h</key>
+		<key>PrivateHeaders/AGTMaterial.h</key>
 		<data>
-		rV05xGhFaaigSnbq3edRrIvYqFU=
+		zHAJKSqRE+8TKn8Xbp3pHxtsBhA=
+		</data>
+		<key>PrivateHeaders/AGTModel3D+Private.h</key>
+		<data>
+		ky/PS9y2ind2RIvztWxLOBcHyLU=
+		</data>
+		<key>PrivateHeaders/AGTModel3DDataController+Private.h</key>
+		<data>
+		45Z92qVFhkjsmfgMx/PXRr6l5CI=
+		</data>
+		<key>PrivateHeaders/AGTNetworkManager.h</key>
+		<data>
+		9FSUl3fKpoWHFba0AipRWpirCWg=
+		</data>
+		<key>PrivateHeaders/AGTNetworkTaskMerger.h</key>
+		<data>
+		nSNcq0/VUQbONNXdKGC9Q+j5iNw=
+		</data>
+		<key>PrivateHeaders/AGTOAuthCredential.h</key>
+		<data>
+		N6sz9Hh/VDkNJeHkMKRX7C5yP1o=
+		</data>
+		<key>PrivateHeaders/AGTThumbnail.h</key>
+		<data>
+		I4Jj9D7fKL8PxGElDhlTdu1/lo8=
+		</data>
+		<key>PrivateHeaders/AGTTokenPersistenceController.h</key>
+		<data>
+		NJ40mFMXClczKgyDVBIumL9ZVPw=
+		</data>
+		<key>PrivateHeaders/AGTTokenStorage.h</key>
+		<data>
+		go4rLeUfDHGuYzzVicaISH6xQI4=
+		</data>
+		<key>PrivateHeaders/AGTUserSignInRequest.h</key>
+		<data>
+		ke+L0r8n7OCaPXoDo4wmpjitc6Y=
+		</data>
+		<key>PrivateHeaders/AGTUserSignInResponse.h</key>
+		<data>
+		BOxOXbTln+iVnka6j9NJZyuHdMU=
+		</data>
+		<key>PrivateHeaders/AGTWebAPI+Analytics.h</key>
+		<data>
+		xhIUx/tjptPlBmbE2TECv5vmn4w=
+		</data>
+		<key>PrivateHeaders/AGTWebAPI+ExternalReferences.h</key>
+		<data>
+		8qKOFrVUBdVm83bx0f+5O5O3zkk=
+		</data>
+		<key>PrivateHeaders/AGTWebAPI+Folders.h</key>
+		<data>
+		FT+0Wy6OfjZACjXMYgXutt9+elk=
+		</data>
+		<key>PrivateHeaders/AGTWebAPI+Galleries.h</key>
+		<data>
+		OtBGVhyWejICF8v5tIM6cL0Atus=
+		</data>
+		<key>PrivateHeaders/AGTWebAPI+Model3Ds.h</key>
+		<data>
+		z6sQsSvpE2Eue+CtXKS/Ny2Pk48=
+		</data>
+		<key>PrivateHeaders/AGTWebAPI+Products.h</key>
+		<data>
+		iC9nvn33jXjmKVqvWLLu9md2/Ks=
+		</data>
+		<key>PrivateHeaders/AGTWebAPI+UserSession.h</key>
+		<data>
+		X4bmsOCUtdlLi3NtROWgmUpp51g=
+		</data>
+		<key>PrivateHeaders/AGTWebAPI.h</key>
+		<data>
+		yXKVddP4iqsGEIwKP4mz1t8vuEA=
+		</data>
+		<key>PrivateHeaders/NSDictionary+JSONExtension.h</key>
+		<data>
+		OHisIk1yZUaWWITXkXqxvTbYZHI=
+		</data>
+		<key>PrivateHeaders/NSUUID+v5Extension.h</key>
+		<data>
+		GhI+YSihdUjHq6rbNkFI6er+DRY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -182,33 +226,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wdfV8Eoof2YBJKXoQjEQlLAcdhA=
+			cvVz/l5dH9hMZ0ON4n+RLger/UY=
 			</data>
 			<key>hash2</key>
 			<data>
-			dBDY3Vtx2V8wIH2MToZufM5ynk+e9Dnuw/vVuQVd0CU=
+			e1iDE1BFSc4wXuQRrrYPAEmUKEh9coiz7j1jGm/MnuM=
 			</data>
 		</dict>
 		<key>Headers/AGTAugmentSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Kajq9futQlyBXa42oL9/2Q70g0k=
+			rlP5rlP4DkuevahLxW/ls9OZbIU=
 			</data>
 			<key>hash2</key>
 			<data>
-			6BaGtooIt6igNr0xPQ1e4SUh8pLpkeb8SkWmAJd8jG4=
+			ba4h5ilxUWfrBqxdcB6ChZT1lC58hUdXrorRct2QbFQ=
 			</data>
 		</dict>
 		<key>Headers/AGTBlocks.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AOBxsIoosH5FgUW4GFpf8YaI/bI=
+			iJoaKqDYA85b27F0Bl/CnoJlFo0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q8caeaihcxu9Kc8TY+4czcTinMJsJFMBmpWD2mPWtwg=
+			GtZJAslOJK/tepCL+sE9mquwvtSBSm6MktEY5x+FW5U=
 			</data>
 		</dict>
 		<key>Headers/AGTDevice.h</key>
@@ -222,136 +266,59 @@
 			gAUz4D4/yKXzhMHme1PsVfaxnt+0Eb34BOZT6AC6OgU=
 			</data>
 		</dict>
-		<key>Headers/AGTDimension.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jkRjOfF6SLMyuZx3S9tMxeVkkgU=
-			</data>
-			<key>hash2</key>
-			<data>
-			e2AeE5nfkOKyUCaIutwu7tlQ5eFhLBFjPFPx8Swtn8Y=
-			</data>
-		</dict>
-		<key>Headers/AGTDisplayConfiguration.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dyPTROZBxge5f9Ikg8VHcPGbyxI=
-			</data>
-			<key>hash2</key>
-			<data>
-			dydAQiMIRY5+978mpd5ijKHPdedCT/+l1UaBDWoekhE=
-			</data>
-		</dict>
 		<key>Headers/AGTError.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ry04zzJQKKzPPsR+9kkJZYw6O0E=
+			XA29xdTD4UHxFwLl8MSFfNB+PhY=
 			</data>
 			<key>hash2</key>
 			<data>
-			kC90+KLEG0RJ1p+4Umm2k7s49A11+ffkmA9QZdxTb+Y=
-			</data>
-		</dict>
-		<key>Headers/AGTExternalReference.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			T5WM6rkRZMDJrPS2DgKjPwUY2Vc=
-			</data>
-			<key>hash2</key>
-			<data>
-			5VcXIsFJ2s1pmW5wQLq3GDUH4mMJHl+e4HLHWpHnRK4=
-			</data>
-		</dict>
-		<key>Headers/AGTFolder.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uU2rc5dHc/lwypnMjnMAoa3ikos=
-			</data>
-			<key>hash2</key>
-			<data>
-			6LMo2JM2e0m/jUEzLQUhsRtSJMRvaagkA7BxIe4YLWo=
-			</data>
-		</dict>
-		<key>Headers/AGTGallery.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			z+Yz9xmn+t8wCTiqxDmikUPhms4=
-			</data>
-			<key>hash2</key>
-			<data>
-			fhoP9u4F1chEy1VCzA8CwuOctDs27kEbZYVsVjHdAcM=
-			</data>
-		</dict>
-		<key>Headers/AGTMaterial.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			h66j2xpfJY+7qhURhM4khiJopLk=
-			</data>
-			<key>hash2</key>
-			<data>
-			B6fq+Rd6AfR2nbrMrpzCYG48W+KjfhMM33kUBPD9Aa4=
+			f5sG/80r2e0JEzdKtORlvIsEin5YBTKp/YAASk7ZglE=
 			</data>
 		</dict>
 		<key>Headers/AGTModel3D.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			shUEFGcGvCsQ/TAqQQKJNPgo37A=
+			ooWRmNgQTVGEKuHkonETZJd1aXo=
 			</data>
 			<key>hash2</key>
 			<data>
-			vwlSuYv2eehlfWjlPDPbcEKcfupgmV4QQBEQUwKM6OM=
+			PFKlcdVjwU/gNjhH6qbbIAGq7iZASydLCgf6XsxwSWQ=
 			</data>
 		</dict>
-		<key>Headers/AGTNetworkManager.h</key>
+		<key>Headers/AGTModel3DDataController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WBTfzo+YW8+PKOzCuQtamcyda8g=
+			As50UPWg4k4kmEpqdtvjVJjwNME=
 			</data>
 			<key>hash2</key>
 			<data>
-			HN5LElCfF2Mu4Xz8kApzod+XPkzRC3BkOmKWWLNA1XE=
-			</data>
-		</dict>
-		<key>Headers/AGTOAuthCredential.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			N6sz9Hh/VDkNJeHkMKRX7C5yP1o=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ea+xZR6ePy3uArEneItmdvCY6eDTM5HsUxJuE9IXOVs=
+			4xZIEFL/HqNXFGpCsCwB0RGQtdY6ECUmf+8I6MIWzD0=
 			</data>
 		</dict>
 		<key>Headers/AGTProduct.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lDrRUVKkQxzw7yMIp1eF++OAA1c=
+			Eqean5M5rGA5lZdN2kLZOulOXcc=
 			</data>
 			<key>hash2</key>
 			<data>
-			6nUsPonjj1N/jXJugq3oNvfLO8Uc9dHLwPeSGd4/UGg=
+			5mGXq2lsg8kvge6SRu8AhOOSX6Pm06S0XxZgm3oF9mM=
 			</data>
 		</dict>
 		<key>Headers/AGTProductsDataController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Xwfyfw99BI+7l6gc9B5W3CI2xS4=
+			F/0kh6DaJTgbONIdkymu40DxCrY=
 			</data>
 			<key>hash2</key>
 			<data>
-			lcIkxSv4DRU/p+G1LrNTg55vtRAxdePdJj31om7vxvA=
+			P71Xqu/2xVdkKlfimqEqLQ6aP4wejhju5LHMhygbnpw=
 			</data>
 		</dict>
 		<key>Headers/AGTTargetConditionals.h</key>
@@ -376,158 +343,26 @@
 			LAkbVV4OdG566PwtZ/fYOxtUEvRtgJfeofPuaQrWNZQ=
 			</data>
 		</dict>
-		<key>Headers/AGTThumbnail.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			I4Jj9D7fKL8PxGElDhlTdu1/lo8=
-			</data>
-			<key>hash2</key>
-			<data>
-			d3eVe36gjBUoqspk8Tat09xz3NcjYnJcPy+fvxjkwUw=
-			</data>
-		</dict>
-		<key>Headers/AGTTokenPersistenceController.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8gcAd+BWhQW8zZBdIfTNhb8Ta3I=
-			</data>
-			<key>hash2</key>
-			<data>
-			lBMw4md8GCu5fKYc31qOuIOSPmsJUL8B9oqIZ+bYBn8=
-			</data>
-		</dict>
-		<key>Headers/AGTTokenStorage.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UOqPuDYQx6tKUlPVD5FhGLQjG7Q=
-			</data>
-			<key>hash2</key>
-			<data>
-			qPItRCrPq/TCa2UPcN/KQDadxHKCjocNt4EARe9nmo0=
-			</data>
-		</dict>
-		<key>Headers/AGTUserSignInRequest.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ke+L0r8n7OCaPXoDo4wmpjitc6Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			xILmUQ81jyAH0ZOmKSRfMhbCDP9CmxOOtQ/FAX+s+OE=
-			</data>
-		</dict>
-		<key>Headers/AGTUserSignInResponse.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			BOxOXbTln+iVnka6j9NJZyuHdMU=
-			</data>
-			<key>hash2</key>
-			<data>
-			BffauuUxlBRwjmXKumwGOfZ4pwot+aca7O9i8EmpuqU=
-			</data>
-		</dict>
 		<key>Headers/AGTView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/VepqoPJUwOfqqTMfC/kbzndevM=
+			e4S5ZcZKPA9SWi0RfnauQieYQ9Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			qzxIRBTFZs3gky44id3WjNJ4D6r0qZ4TAWFx+/DiqoU=
-			</data>
-		</dict>
-		<key>Headers/AGTWebAPI+ExternalReferences.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8qKOFrVUBdVm83bx0f+5O5O3zkk=
-			</data>
-			<key>hash2</key>
-			<data>
-			XL8CtNGmNfORXOC50oqCubWTUXzDfjHw4WXRAAdUNQw=
-			</data>
-		</dict>
-		<key>Headers/AGTWebAPI+Folders.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Kyit0TpMDMGKPsEzO4F0gyuW3o4=
-			</data>
-			<key>hash2</key>
-			<data>
-			VFp5qsQUfWi5O8UbaqHoxw0S2QeIRXDbyfmtlml+v/s=
-			</data>
-		</dict>
-		<key>Headers/AGTWebAPI+Galleries.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OtBGVhyWejICF8v5tIM6cL0Atus=
-			</data>
-			<key>hash2</key>
-			<data>
-			jNJOxRwAfmEmCo3uu4/ZQE5LINwuLWP6Cvf7Hlevyxw=
-			</data>
-		</dict>
-		<key>Headers/AGTWebAPI+Model3Ds.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oZIapjySrIA22hkVecJnyzs0NvA=
-			</data>
-			<key>hash2</key>
-			<data>
-			hvvnNydQzwtOCXXTvsolWk2GncdQujAGtdxVbItRVG8=
-			</data>
-		</dict>
-		<key>Headers/AGTWebAPI+Products.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			iC9nvn33jXjmKVqvWLLu9md2/Ks=
-			</data>
-			<key>hash2</key>
-			<data>
-			llsDmzkX+k2CS3wcZx5x+tZPskLMVYpAq6mxUM/iD+Q=
-			</data>
-		</dict>
-		<key>Headers/AGTWebAPI+UserSession.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ewpOEPSaSpewyzmeFzUHozvhIx4=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ip6+NAizxTtJ34zIRTiop78Lb2XlzTCeKb9zWt310gg=
-			</data>
-		</dict>
-		<key>Headers/AGTWebAPI.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			GqfU7QBafr/J6kV1MfW72obcyyo=
-			</data>
-			<key>hash2</key>
-			<data>
-			v1vFAhBeTGtEoX3yFg5i0WtPZsKy5gjIzDJ6sbic+ZM=
+			eHGUr1vmXnxmC4//skvYDmNLZ+M+isYx5dFnrLxICzo=
 			</data>
 		</dict>
 		<key>Headers/AugmentPlayerSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8dKhTPOwXKOoqIMFGu2jAWk9o5Q=
+			oq9fdpCx+87uSm6VNFjNl7TxoPI=
 			</data>
 			<key>hash2</key>
 			<data>
-			H3l75ffin3XOHZ9pNEbzGYRrrLBcV7vaH/Ryrm3Cvy4=
+			rgVuY+7CZaPwelcjnqskqruwISjBqfO644FskTlXAak=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -541,26 +376,136 @@
 			ckj7xoN7fbg872RJZSGeQzlEL5uoscYNwIj2S13zGV0=
 			</data>
 		</dict>
+		<key>PrivateHeaders/AGTAnalyticsManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rn6gJv05Gj4r+iTk/mDGg1xtO6c=
+			</data>
+			<key>hash2</key>
+			<data>
+			hMw9vRMkXrexreAHg1KVYy+NPfIHrhQft6CYseGfCHg=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTAnalyticsSession.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HAbCLhX8i7l8X3UcEriCBU8+PqM=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ch/NtO5x+BRb00XVKdZPFoDlBWEkbet8ubnLqJUj3SM=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTAnalyticsSessionStorage.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IAaViQ1DwMUuPqABSc5KeQI9z9k=
+			</data>
+			<key>hash2</key>
+			<data>
+			WxltO4vq5/oBaMDMJ/F4R1kM0n6B+YflP01CFKo5pv8=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTAssetsPathProvider.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			a5PTTfo+85VKH7W5gXCfKah/sM4=
+			</data>
+			<key>hash2</key>
+			<data>
+			bOFpYGXRpQtNRKS6QnDyUZiSYoDdSNkuIWB+GXu6CDs=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTAugmentPlayer+Notifications.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wQjyxEceDfF9XegrqlrYGFW2N44=
+			</data>
+			<key>hash2</key>
+			<data>
+			QPK/1n8TEe6pCMeD9S7B/qoIgN3mxOzZDP+BAxQyvuM=
+			</data>
+		</dict>
 		<key>PrivateHeaders/AGTAugmentPlayer+Private.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			f/m11xvDAKmmURCoUChSFcQGvWE=
+			XW/diezZSGncLzs+Z2RUyaG3iw4=
 			</data>
 			<key>hash2</key>
 			<data>
-			kFgIh1k7zeAHa1irLU96CuZQVzHtF6EqxP4AI28rD1M=
+			VrNsKoo1DT8bZN4W37qNX/piUMgdDQYBWK698YeGm9A=
 			</data>
 		</dict>
 		<key>PrivateHeaders/AGTAugmentSDK+Private.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RyMDhbR/4qNcGi56+gIUET+TfXg=
+			eXFLzPkq6BKRppcxl3Ou/ineRQY=
 			</data>
 			<key>hash2</key>
 			<data>
-			IoMHSGpX0yawCqZM0BxkD8NheT1wNTnybey6gK1VqmU=
+			FuP1hLPm5Vx4Sm8QEVT2RHr8FMU32VEo1NwvAT4Ixio=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTDimension.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jkRjOfF6SLMyuZx3S9tMxeVkkgU=
+			</data>
+			<key>hash2</key>
+			<data>
+			e2AeE5nfkOKyUCaIutwu7tlQ5eFhLBFjPFPx8Swtn8Y=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTDisplayConfiguration.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dyPTROZBxge5f9Ikg8VHcPGbyxI=
+			</data>
+			<key>hash2</key>
+			<data>
+			dydAQiMIRY5+978mpd5ijKHPdedCT/+l1UaBDWoekhE=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTExternalReference.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			u07PLOP+fKu6Je+HRiTYmjzwh4Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			sumnuP+gLuXD20J41POlQaFKoBJrVX/JaBrpvWW88AA=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTFolder.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8HqCvbcUoxTP89KBx2fCIkIx6VM=
+			</data>
+			<key>hash2</key>
+			<data>
+			nqV2GrAFeKlLpy5tClzU52YkC444YEh/pU7zM18b4Sk=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTGallery.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z+Yz9xmn+t8wCTiqxDmikUPhms4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fhoP9u4F1chEy1VCzA8CwuOctDs27kEbZYVsVjHdAcM=
 			</data>
 		</dict>
 		<key>PrivateHeaders/AGTJSONMapper.h</key>
@@ -585,15 +530,235 @@
 			QHSuyDGbncs8I9R5y3RWTwOpxUYrqDDj/Hcp9rJ/wWs=
 			</data>
 		</dict>
-		<key>PrivateHeaders/AGTModel3DDataController.h</key>
+		<key>PrivateHeaders/AGTMaterial.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rV05xGhFaaigSnbq3edRrIvYqFU=
+			zHAJKSqRE+8TKn8Xbp3pHxtsBhA=
 			</data>
 			<key>hash2</key>
 			<data>
-			a4w/3WRd0pXpMDbsRKQ5PJxa+w6KYqtzPgZcxRKaGCI=
+			LbXfXUjqY+KJjF2fbeN0u9od1SWTt5EHu7ZkSzH2dTQ=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTModel3D+Private.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ky/PS9y2ind2RIvztWxLOBcHyLU=
+			</data>
+			<key>hash2</key>
+			<data>
+			XLVliv2iP1exjJc/mF/5vephNZKcfko5dZUiKN6HnxE=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTModel3DDataController+Private.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			45Z92qVFhkjsmfgMx/PXRr6l5CI=
+			</data>
+			<key>hash2</key>
+			<data>
+			+ssSuDW5/hssIysu7ydbrOGvK2rIxvLONLY23t7cx80=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTNetworkManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9FSUl3fKpoWHFba0AipRWpirCWg=
+			</data>
+			<key>hash2</key>
+			<data>
+			t0oj+ffTtNOrxKFESwKEaFfGnEAtSbobtlsCKJdV+cE=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTNetworkTaskMerger.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nSNcq0/VUQbONNXdKGC9Q+j5iNw=
+			</data>
+			<key>hash2</key>
+			<data>
+			fksp3fcUvJNOVv2Gm/RnLP90ESLZz4GspISKDhMpnNs=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTOAuthCredential.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			N6sz9Hh/VDkNJeHkMKRX7C5yP1o=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ea+xZR6ePy3uArEneItmdvCY6eDTM5HsUxJuE9IXOVs=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTThumbnail.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			I4Jj9D7fKL8PxGElDhlTdu1/lo8=
+			</data>
+			<key>hash2</key>
+			<data>
+			d3eVe36gjBUoqspk8Tat09xz3NcjYnJcPy+fvxjkwUw=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTTokenPersistenceController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NJ40mFMXClczKgyDVBIumL9ZVPw=
+			</data>
+			<key>hash2</key>
+			<data>
+			X4AaUmHRcuMEA/kuB4joE6NO8XlSJ2fnYpaXj0VG2Us=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTTokenStorage.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			go4rLeUfDHGuYzzVicaISH6xQI4=
+			</data>
+			<key>hash2</key>
+			<data>
+			kj0NWy8eodpULH20CLeWKdosQvR4uaMVKQzZPLv/rE8=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTUserSignInRequest.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ke+L0r8n7OCaPXoDo4wmpjitc6Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			xILmUQ81jyAH0ZOmKSRfMhbCDP9CmxOOtQ/FAX+s+OE=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTUserSignInResponse.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BOxOXbTln+iVnka6j9NJZyuHdMU=
+			</data>
+			<key>hash2</key>
+			<data>
+			BffauuUxlBRwjmXKumwGOfZ4pwot+aca7O9i8EmpuqU=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTWebAPI+Analytics.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xhIUx/tjptPlBmbE2TECv5vmn4w=
+			</data>
+			<key>hash2</key>
+			<data>
+			T+ZAXY/T9fAewe7X3SrCvYa3ei8+/tCaPXDsSlpJ0J8=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTWebAPI+ExternalReferences.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8qKOFrVUBdVm83bx0f+5O5O3zkk=
+			</data>
+			<key>hash2</key>
+			<data>
+			XL8CtNGmNfORXOC50oqCubWTUXzDfjHw4WXRAAdUNQw=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTWebAPI+Folders.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FT+0Wy6OfjZACjXMYgXutt9+elk=
+			</data>
+			<key>hash2</key>
+			<data>
+			2NscPpmMK81DTHgZRkTMkusj7EigBsIEVQglGk3cVS0=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTWebAPI+Galleries.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OtBGVhyWejICF8v5tIM6cL0Atus=
+			</data>
+			<key>hash2</key>
+			<data>
+			jNJOxRwAfmEmCo3uu4/ZQE5LINwuLWP6Cvf7Hlevyxw=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTWebAPI+Model3Ds.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z6sQsSvpE2Eue+CtXKS/Ny2Pk48=
+			</data>
+			<key>hash2</key>
+			<data>
+			BXSrHREAPAH9e8NOIzlp0cFaNbEntyJbQnRwkwg9kdk=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTWebAPI+Products.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iC9nvn33jXjmKVqvWLLu9md2/Ks=
+			</data>
+			<key>hash2</key>
+			<data>
+			llsDmzkX+k2CS3wcZx5x+tZPskLMVYpAq6mxUM/iD+Q=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTWebAPI+UserSession.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X4bmsOCUtdlLi3NtROWgmUpp51g=
+			</data>
+			<key>hash2</key>
+			<data>
+			P2Oi7qV3vi/kJJv2WlPUesLuyqZl32RENHedAROMhIs=
+			</data>
+		</dict>
+		<key>PrivateHeaders/AGTWebAPI.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yXKVddP4iqsGEIwKP4mz1t8vuEA=
+			</data>
+			<key>hash2</key>
+			<data>
+			HIb9UTA+QN9y5XIRN2+BqF1CkRdpiR8oS/nxJMZyxAE=
+			</data>
+		</dict>
+		<key>PrivateHeaders/NSDictionary+JSONExtension.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OHisIk1yZUaWWITXkXqxvTbYZHI=
+			</data>
+			<key>hash2</key>
+			<data>
+			S3aFqM1YuY6Ob+c13HgPiyewOgkTRNXMIo4wpj17NV8=
+			</data>
+		</dict>
+		<key>PrivateHeaders/NSUUID+v5Extension.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GhI+YSihdUjHq6rbNkFI6er+DRY=
+			</data>
+			<key>hash2</key>
+			<data>
+			BJkQxbCqZtdla8943rS/hUQ7e+juI9uihxAwJaOxueg=
 			</data>
 		</dict>
 	</dict>

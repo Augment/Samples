@@ -6,6 +6,6 @@ target 'ACMEShop' do
   use_frameworks!
 
   # Pods for ACMEShop
-  pod 'AugmentPlayerSDK', '1.0.1'
+  pod 'AugmentPlayerSDK', '1.2.2'
 
 end

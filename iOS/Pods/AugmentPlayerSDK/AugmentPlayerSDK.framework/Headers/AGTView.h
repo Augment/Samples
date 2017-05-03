@@ -18,13 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-/**
+/****
  These parameters have the same meaning for all AGTViewDelegate methods
 
  @param view                   sender instance
- @param gestureecognizer       active gesture recognizer
+ @param gestureRecognizer      active gesture recognizer
  @param success                YES if the gesture applied on a model 3D in the scene, NO otherwise
- */
+ *///
 
 // Starts animating model 3D
 - (void)view:(AGTView *)view appliedOneFingerTap:(UITapGestureRecognizer *)oneFingerTapRecognizer withSuccess:(BOOL)success;

@@ -12,10 +12,10 @@
 
 #import "AGTAugmentPlayer.h"
 #import "AGTProductsDataController.h"
+#import "AGTModel3D.h"
+#import "AGTModel3DDataController.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-#pragma mark - Constants
 
 /**
  AGTAugmentSDK is the main class of the SDK
@@ -39,9 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
  *                          VuforiaKey: "your Vuforia key"}
  *  }
  
- @param sharedClientID     your client ID
- @param sharedClientSecret your client secret
- @param sharedVuforiaKey   your Vuforia key
+ @param clientID     your client ID
+ @param clientSecret your client secret
+ @param VuforiaKey   your Vuforia key
  
  @return YES if parameters are set as shared SDK keys,
  NO if shared keys aren't changed since they were already used or set before
@@ -63,10 +63,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  create and initialize AGTAugmentSDK instance
  *  this method doesn't register and authenticate you into Augment webservice
  *  if your clientID and/or clientSecret is invalid, you will have an auth error during your first network request to Augment webservices
- *
- *  @param clientID     client identifier to register Augment webservice
- *  @param clientSecret client secret string to register Augment webservice
- *
  *  @return a newly created AGTAugmentSDK instance
  */
 - (instancetype)init;
@@ -87,10 +83,36 @@ NS_ASSUME_NONNULL_BEGIN
  *                                                  if whole process completes successfully and adding model to AugmentPlayer is successful. runs on main thread
  *
  *  @return a newly created download task for downloading asset if needed. returns nil if no download initiated
+ *  NOTE: if you cancel returned download task, the whole operation is cancelled and model isn't added to AugmentPlayer
  */
 - (nullable NSURLSessionDownloadTask *)addProductToAugmentPlayer:(AGTProduct *)product
                                                 downloadProgress:(nullable AGTOperationProgressBlock)downloadProgress
                           operationCompletionWithModelIdentifier:(nullable AGTOperationCompletedWithIdentifierBlock)operationCompletionWithModelIdentifier;
+
+/**
+ Remove model 3Ds from the scene with their scene identifiers
+ Scene identifiers are returned in operationCompletionWithModelIdentifier block of 
+      addProductToAugmentPlayer:downloadProgress:operationCompletionWithModelIdentifier: method
+
+ @param model3DSceneIdentifiers scene identifiers of model 3Ds that are already added to scene
+ */
+- (void)removeModel3DsFromSceneWithSceneIdentifiers:(NSArray<NSUUID*> *)model3DSceneIdentifiers;
+
+/**
+ *  this method lets us add a model 3D to Augment Player without fetching its JSON
+ *  if you cancel returned download task, the whole operation is cancelled and model isn't added to AugmentPlayer
+ *
+ *  @param model3D                                model to be added to augmented reality scene
+ *  @param model3DDataController                  data controller to download model 3D asset if needed
+ *  @param assetType                              asset type to be downloaded. specifies if the asset to be kept permanently or in cache folder
+ *  @param downloadProgress                       download progress block to be executed if download is needed. runs on background thread
+ *  @param operationCompletionWithModelIdentifier returns unique model id from Augment Player if model is added to player successfully, otherwise returns nil and an error. runs on main thread
+ *
+ *  @return a newly created download task for downloading asset if needed. returns nil if no download initiated
+ */
+- (NSURLSessionDownloadTask *)addModel3DToAugmentPlayer:(AGTModel3D *)model3D
+                                       downloadProgress:(AGTOperationProgressBlock)downloadProgress
+                 operationCompletionWithModelIdentifier:(AGTOperationCompletedWithIdentifierBlock)operationCompletionWithModelIdentifier;
 
 /**
  *  deletes model3D asset and metadata of model3D that corresponds to given AGTProduct from disk
@@ -104,6 +126,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  you can use it in order to check if your product does exist in Augment database or not
  */
 @property (nonatomic, strong, readonly) AGTProductsDataController *productsDataController;
+
+/**
+ Model3DDataController instance for asset management
+ */
+@property (nonatomic, strong, readonly) AGTModel3DDataController *model3DDataController;
 
 @end
 

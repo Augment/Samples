@@ -27,7 +27,6 @@ typedef void (^AGTOperationProgressBlock)(NSProgress *progress);
  *  NOTE: error can be NON-nil while success is YES
  *
  *  @param downloadStarted YES if download is needed and started, NO if no download started
- *  @param downloadSuccess YES if download completed successfully, NO if download completes with error
  *  @param error NSError instance which contains error information. can be nil if no error occurred
  */
 typedef void (^AGTDownloadIfNeededCompletionBlock)(BOOL downloadStarted, NSError * _Nullable error);
@@ -38,10 +37,10 @@ typedef void (^AGTDownloadIfNeededCompletionBlock)(BOOL downloadStarted, NSError
  *  Can be used with async operations which returns a value at completion
  *  e.g: when AugmentPlayer adds a model to itself, it assigns an ID to the model and that ID should be returned
  *
- *  @param returnValue a string value.
- *  @param errors      NSError array which contains error informations. can be nil if no error occurred, can contain one NSError from webservice and one error from AugmentPlayer
+ *  @param itemIdentifier a string value.
+ *  @param errors         NSError array which contains error informations. can be nil if no error occurred, can contain one NSError from webservice and one error from AugmentPlayer
  */
-typedef void (^AGTOperationCompletedWithIdentifierBlock)(NSString * _Nullable itemIdentifier, NSArray<NSError*> * _Nullable errors);
+typedef void (^AGTOperationCompletedWithIdentifierBlock)(NSUUID * _Nullable itemIdentifier, NSArray<NSError*> * _Nullable errors);
 
 NS_ASSUME_NONNULL_END
 

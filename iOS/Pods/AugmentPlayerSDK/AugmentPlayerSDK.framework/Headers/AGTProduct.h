@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface AGTProduct : NSObject
 
 @property (nonatomic, copy, readonly, nullable) NSString *identifier;
@@ -17,3 +19,5 @@
 @property (nonatomic, copy, readonly, nullable) NSString *ean;
 
 @end
+
+NS_ASSUME_NONNULL_END
