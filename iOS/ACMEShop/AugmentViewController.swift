@@ -218,13 +218,13 @@ class AugmentViewController: UIViewController, UIScrollViewDelegate {
     func startAR() {
         loadingContainerView.isHidden = true
         augmentPlayer.resume()
-        augmentPlayer.fitModel3DsToView()
+        augmentPlayer.recenterProducts()
         
         toolbarContainer.isHidden = false
     }
 
     @IBAction func centerObjectsAction(_ sender: Any) {
-        augmentPlayer.fitModel3DsToView()
+        augmentPlayer.recenterProducts()
     }
 
     @IBAction func captureAction() {

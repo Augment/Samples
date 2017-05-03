@@ -3,4 +3,3 @@
 //
 
 #import <AugmentPlayerSDK/AugmentPlayerSDK.h>
-#import <AugmentPlayerSDK/AGTAugmentPlayer+Private.h>
