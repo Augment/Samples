@@ -7,7 +7,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.augment.acmeshop"
-        minSdkVersion 16
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 7
         versionName "1.3"
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -43,7 +43,7 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
-
     // Augment Player SDK
-    implementation('com.ar.augment:augment-player-sdk:1.0.2')
+//    implementation 'com.ar.augment:augment-player-sdk:1.0.2'
+    implementation project(':augment-player-sdk-release')
 }
