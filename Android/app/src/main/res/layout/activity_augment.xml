@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_augment"
     android:layout_width="match_parent"
@@ -7,10 +8,15 @@
     android:background="@color/colorBackground"
     tools:context="com.augment.acmeshop.activities.AugmentActivity">
 
-    <android.opengl.GLSurfaceView
-        android:id="@+id/augmentView"
+    <fragment
+        android:id="@+id/augment_player_fragment"
+        android:name="com.ar.augment.arplayer.sdk.AugmentPlayerFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,12 +26,12 @@
             android:id="@+id/helpButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
             android:background="#88FFFFFF"
             android:onClick="onClick"
             android:text="@string/help_action"
@@ -54,10 +60,10 @@
                 android:layout_height="48dp"
                 android:layout_margin="10dp"
                 android:background="@color/colorPrimary"
+                android:onClick="onClick"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="@string/center_action"
-                android:onClick="onClick"
                 android:textColor="@color/colorBackground" />
         </LinearLayout>
 
@@ -88,10 +94,10 @@
             android:id="@+id/loadingTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingEnd="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
             android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
             android:text="@string/loading_"
             android:textColor="@color/colorForeground"
             android:textStyle="normal|bold" />
@@ -127,11 +133,11 @@
             android:id="@+id/pagerTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:textSize="18sp"
-            android:text="@string/step_1_4" />
+            android:text="@string/step_1_4"
+            android:textSize="18sp" />
 
     </LinearLayout>
 

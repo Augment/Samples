@@ -4,10 +4,11 @@ import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.augment.acmeshop.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Parent App Activity class to handle few helpers
