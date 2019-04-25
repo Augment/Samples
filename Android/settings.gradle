@@ -1,1 +1,1 @@
-include ':app', ':augment-player-sdk-release'
+include ':app'

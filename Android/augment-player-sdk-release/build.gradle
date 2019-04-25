@@ -1,5 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('augment-player-sdk-release.aar'))
-dependencies {
-
-}
