@@ -2,9 +2,6 @@ package com.augment.acmeshop.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -20,6 +17,11 @@ import com.augment.acmeshop.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ListingActivity extends ACMEShopActivity {
 
@@ -37,7 +39,7 @@ public class ListingActivity extends ACMEShopActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listing);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
@@ -121,14 +123,14 @@ public class ListingActivity extends ACMEShopActivity {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.grid_item_product, parent, false);
             ViewHolder holder = new ViewHolder(view);
-            holder.productImageView     = (ImageView) view.findViewById(R.id.productImageView);
-            holder.productTitleTextView = (TextView) view.findViewById(R.id.productTitleTextView);
-            holder.productPriceTextView = (TextView) view.findViewById(R.id.productPriceTextView);
+            holder.productImageView     = view.findViewById(R.id.productImageView);
+            holder.productTitleTextView = view.findViewById(R.id.productTitleTextView);
+            holder.productPriceTextView = view.findViewById(R.id.productPriceTextView);
             return holder;
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             Product product = products.get(position);
 
             int res = getResources().getIdentifier(product.getPicture(), "drawable", getPackageName());

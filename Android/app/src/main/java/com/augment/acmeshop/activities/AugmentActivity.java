@@ -1,42 +1,30 @@
 package com.augment.acmeshop.activities;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ar.augment.arplayer.LoaderCallback;
-import com.ar.augment.arplayer.ScreenshotTakerCallback;
-import com.ar.augment.arplayer.WebserviceException;
-import com.ar.augment.arplayer.core.utils.CoroutinesDispatcherProvider;
-import com.ar.augment.arplayer.core.utils.ExtensionsKt;
-import com.ar.augment.arplayer.core.utils.math.Unit;
+import com.ar.augment.arplayer.sdk.AugmentPlayer;
 import com.ar.augment.arplayer.sdk.AugmentPlayerFragment;
 import com.ar.augment.arplayer.sdk.AugmentSDK;
-import com.ar.augment.arplayer.sdk.ProductDataController;
 import com.ar.augment.arplayer.services.payloads.ProductQuery;
 import com.augment.acmeshop.ACMEShop;
 import com.augment.acmeshop.R;
 import com.augment.acmeshop.models.Product;
 
 import java.io.File;
-import java.util.function.BiFunction;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
-import kotlin.MathKt;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import kotlin.Unit;
 
 /**
@@ -47,7 +35,7 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
 
     View loadingContainer;
     TextView loadingTextView;
-    AugmentPlayerFragment augmentView;
+    AugmentPlayer augmentPlayer;
 
     // Please see Augment UX recommendations about how to onboard your users
     View tutorialContainer;
@@ -71,14 +59,16 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_augment);
 
+        augmentPlayerSDK = AugmentSDK.getInstance();
+
         loadingContainer = findViewById(R.id.loadingContainer);
-        loadingTextView = (TextView) findViewById(R.id.loadingTextView);
+        loadingTextView = findViewById(R.id.loadingTextView);
         tutorialContainer = findViewById(R.id.tutorialContainer);
-        augmentView = (AugmentPlayerFragment) getSupportFragmentManager().findFragmentById(R.id.augment_player_fragment);
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        pagerTextView = (TextView) findViewById(R.id.pagerTextView);
-        iGotItButton = (Button) findViewById(R.id.iGotItButton);
-        screenshotButton = (ImageButton) findViewById(R.id.screenshotButton);
+        augmentPlayer = ((AugmentPlayerFragment) getSupportFragmentManager().findFragmentById(R.id.augment_player_fragment)).getAugmentPlayer();
+        viewPager = findViewById(R.id.viewpager);
+        pagerTextView = findViewById(R.id.pagerTextView);
+        iGotItButton = findViewById(R.id.iGotItButton);
+        screenshotButton = findViewById(R.id.screenshotButton);
 
         // Get the current product from the previous activity
         Bundle bundle = getIntent().getExtras();
@@ -166,33 +156,6 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
         initAugmentPlayer();
     }
 
-    // Theses are mandatory overwrites of lifecycle activity method
-    // to keep the AR view working nicely
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-//        if (augmentPlayerSDK != null) {
-//            try {
-//                augmentPlayerSDK.getAugmentPlayer().resume();
-//            } catch (AugmentPlayerException e) {
-//                Log.e(ACMEShop.TAG, "EXCEPTION: " + e.getLocalizedMessage(), e);
-//            }
-//        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-//        if (augmentPlayerSDK != null) {
-//            try {
-//                augmentPlayerSDK.getAugmentPlayer().pause();
-//            } catch (AugmentPlayerException e) {
-//                Log.e(ACMEShop.TAG, "EXCEPTION: " + e.getLocalizedMessage(), e);
-//            }
-//        }
-    }
-
     @Override
     protected void onDestroy() {
 //        if (augmentPlayerSDK != null) {
@@ -212,7 +175,7 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
 
         // Start the AR view and get a callback when the view is ready
 //        final AugmentPlayer augmentPlayer = augmentPlayerSDK.getAugmentPlayer();
-//        augmentPlayer.initAR(this, augmentView, new InitializationListener() {
+//        augmentPlayer.initAR(this, augmentPlayer, new InitializationListener() {
 //
 //            @Override
 //            public void onInitARDone(GLSurfaceView glSurfaceView, AugmentPlayerException e) {
@@ -252,62 +215,44 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
                 product.getBrand(),
                 product.getName(), product.getEan());
 
-//        augmentPlayerSDK.getProductsDataController().checkIfModelDoesExistForUserProductQuery(query, (product, error) -> {
-        augmentPlayerSDK.getProductsDataController().checkIfModelDoesExistForUserProductQuery(query, new );
 
-        augmentPlayerSDK.getProductsDataController().checkIfModelDoesExistForUserProductQuery(query, new ProductDataController.ProductQueryListener() {
-            @Override
-            public void onResponse(@Nullable com.ar.augment.arplayer.Product augmentProduct) {
-                if (augmentProduct == null) {
-                    Log.d(ACMEShop.TAG, "Product " + product.toString() + " is not available.");
-                    hideLoading();
-                    ShowAlert("This product is not available yet");
-                    return;
-                }
-
-                addProductToAugmentedReality(augmentProduct);
-            }
-
-            @Override
-            public void onError(WebserviceException error) {
+        augmentPlayerSDK.getProductsDataController().checkIfModelDoesExistForUserProductQuery(query, (productReceived, error) -> {
+            if (error != null) {
                 Log.e(ACMEShop.TAG, "Product " + product.toString() + " is not available.", error);
                 hideLoading();
                 ShowAlert("This product is not available yet");
-            }
+
+            } else if (productReceived == null) {
+                Log.d(ACMEShop.TAG, "Product " + product.toString() + " is not available.");
+                hideLoading();
+                ShowAlert("This product is not available yet");
+            } else addProductToAugmentedReality(productReceived);
+            return Unit.INSTANCE;
         });
     }
 
-    void addProductToAugmentedReality(@NonNull com.ar.augment.arplayer.Product product) {
-        augmentPlayerSDK.addModel3DToAugmentPlayerWithProduct(product, new LoaderCallback() {
-            @Override
-            public void onSuccess(String modelIdentifier) {
-                hideLoading();
-                screenshotButton.setEnabled(true);
-            }
-
-            @Override
-            public void onPreparingModel() {
-                // Show loading (already present and shown)
-            }
-
-            @Override
-            public void onError(WebserviceException error) {
+    void addProductToAugmentedReality(@NonNull com.ar.augment.arplayer.model.Product product) {
+        augmentPlayer.getContent().add(product.getModel3D(), (model3DInstance, error) -> {
+            if (error != null) {
                 Log.e(ACMEShop.TAG, "Error", error);
                 hideLoading();
                 ShowAlert("Error: " + error.getLocalizedMessage());
+            } else {
+                hideLoading();
+                screenshotButton.setEnabled(true);
             }
-
-            @Override
-            public void onDownloadProgressUpdate(final Long aLong) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        loadingTextView.setText("Loading " + Math.min(100, aLong.intValue()) + "%");
-                    }
-                });
-            }
+            return Unit.INSTANCE;
         });
+//            public void onDownloadProgressUpdate(final Long aLong) {
+//                runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        loadingTextView.setText("Loading " + Math.min(100, aLong.intValue()) + "%");
+//                    }
+//                });
+//            }
     }
+
 
     // Actions
 
@@ -324,45 +269,47 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
                 loadingContainer.setVisibility(View.VISIBLE);
 
                 if (augmentPlayerSDK == null) return;
-                augmentPlayerSDK.getAugmentPlayer().takeScreenshot(new ScreenshotTakerCallback() {
-                    @Override
-                    public void onScreenshotSaved(final File file) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                screenshotButton.setEnabled(true);
-                                hideLoading();
-                                LayoutInflater inflater = getLayoutInflater();
-                                @SuppressLint("InflateParams")
-                                View view = inflater.inflate(R.layout.dialog_preview_share, null);
-                                ImageView imageView = (ImageView) view.findViewById(R.id.previewImageView);
-                                imageView.setImageBitmap(BitmapFactory.decodeFile(file.getAbsolutePath()));
-                                ShowCustomDialog(view, getString(R.string.share_action), new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        shareAction(file);
-                                    }
-                                });
-                            }
-                        });
-                    }
 
-                    @Override
-                    public void onError(final Throwable throwable) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                screenshotButton.setEnabled(true);
-                                hideLoading();
-                                ShowAlert(throwable.getLocalizedMessage());
-                            }
-                        });
-                    }
+                augmentPlayer.takeScreenshot(o -> {
+//                    @Override
+//                    public void onScreenshotSaved(final File file) {
+//                        runOnUiThread(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                screenshotButton.setEnabled(true);
+//                                hideLoading();
+//                                LayoutInflater inflater = getLayoutInflater();
+//                                @SuppressLint("InflateParams")
+//                                View view = inflater.inflate(R.layout.dialog_preview_share, null);
+//                                ImageView imageView = (ImageView) view.findViewById(R.id.previewImageView);
+//                                imageView.setImageBitmap(BitmapFactory.decodeFile(file.getAbsolutePath()));
+//                                ShowCustomDialog(view, getString(R.string.share_action), new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        shareAction(file);
+//                                    }
+//                                });
+//                            }
+//                        });
+//                    }
+//
+//                    @Override
+//                    public void onError(final Throwable throwable) {
+//                        runOnUiThread(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                screenshotButton.setEnabled(true);
+//                                hideLoading();
+//                                ShowAlert(throwable.getLocalizedMessage());
+//                            }
+//                        });
+//                    }
+                    return Unit.INSTANCE;
                 });
 
             case R.id.centerAction:
                 if (augmentPlayerSDK == null) return;
-                augmentPlayerSDK.getAugmentPlayer().recenterProducts();
+                augmentPlayer.recenterProducts();
                 break;
 
             case R.id.iGotItButton:
@@ -387,11 +334,7 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
     // Helpers
 
     void hideLoading() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                loadingContainer.setVisibility(View.GONE);
-            }
-        });
+        runOnUiThread(() -> loadingContainer.setVisibility(View.GONE));
     }
 }
+

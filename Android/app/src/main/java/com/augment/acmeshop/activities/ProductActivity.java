@@ -4,27 +4,26 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ar.augment.arplayer.AugmentPlayerSDK;
-import com.ar.augment.arplayer.ProductDataController;
-import com.ar.augment.arplayer.ProductQuery;
-import com.ar.augment.arplayer.WebserviceException;
+import com.ar.augment.arplayer.sdk.AugmentSDK;
+import com.ar.augment.arplayer.services.payloads.ProductQuery;
 import com.augment.acmeshop.ACMEShop;
-import com.augment.acmeshop.models.Product;
 import com.augment.acmeshop.R;
+import com.augment.acmeshop.models.Product;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import kotlin.Unit;
 
 /**
  * The Product Activity
@@ -41,18 +40,18 @@ public class ProductActivity extends ACMEShopActivity implements View.OnClickLis
     // Current product from the previous activity
     Product product;
 
-    AugmentPlayerSDK augmentPlayerSDK;
+    AugmentSDK augmentPlayerSDK;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
 
-        productImageView = (ImageView) findViewById(R.id.productImageView);
-        productTitleTextView = (TextView) findViewById(R.id.productTitleTextView);
-        productDetailTextView = (TextView) findViewById(R.id.productDetailTextView);
-        productPriceTextView = (TextView) findViewById(R.id.productPriceTextView);
-        seeButton = (Button) findViewById(R.id.seeButton);
+        productImageView = findViewById(R.id.productImageView);
+        productTitleTextView = findViewById(R.id.productTitleTextView);
+        productDetailTextView = findViewById(R.id.productDetailTextView);
+        productPriceTextView = findViewById(R.id.productPriceTextView);
+        seeButton = findViewById(R.id.seeButton);
 
         // Get the current product from the previous activity
         Bundle bundle = getIntent().getExtras();
@@ -67,8 +66,7 @@ public class ProductActivity extends ACMEShopActivity implements View.OnClickLis
             actionBar.setTitle(product.getTitle());
         }
 
-        // Init the Augment Player
-        augmentPlayerSDK = new AugmentPlayerSDK(this.getApplicationContext(), ACMEShop.Augment.AppId, ACMEShop.Augment.AppSecret, ACMEShop.Augment.Vuforia);
+        augmentPlayerSDK = AugmentSDK.getInstance();
 
         seeButton.setEnabled(false);
 
@@ -86,27 +84,20 @@ public class ProductActivity extends ACMEShopActivity implements View.OnClickLis
      */
     void load() {
         // Check if the product exists in Augment Product database
-        ProductQuery query = new ProductQuery.Builder(
+        ProductQuery query = new ProductQuery(
                 product.getIdentifier(),
                 product.getBrand(),
-                product.getName()
-        ).setEan(product.getEan()).build();
+                product.getName(),
+                product.getEan());
 
-        augmentPlayerSDK.getProductDataController().checkIfModelDoesExistForUserProductQuery(query, new ProductDataController.ProductQueryListener() {
-            @Override
-            public void onResponse(@Nullable com.ar.augment.arplayer.Product augmentProduct) {
-                if (augmentProduct == null) {
-                    Log.d(ACMEShop.TAG, "Product " + product.toString() + " is not available.");
-                    return;
-                }
-
-                seeButton.setEnabled(true);
-            }
-
-            @Override
-            public void onError(WebserviceException error) {
+        augmentPlayerSDK.getProductsDataController().checkIfModelDoesExistForUserProductQuery(query, (product1, error) -> {
+            if (error != null) {
                 Log.e(ACMEShop.TAG, "Product " + product.toString() + " is not available.", error);
-            }
+            } else if (product1 == null) {
+                Log.d(ACMEShop.TAG, "Product " + product.toString() + " is not available.");
+            } else seeButton.setEnabled(true);
+
+            return Unit.INSTANCE;
         });
     }
 
@@ -141,14 +132,11 @@ public class ProductActivity extends ACMEShopActivity implements View.OnClickLis
             if (ContextCompat.checkSelfPermission(this, entry.getKey()) != PackageManager.PERMISSION_GRANTED) {
                 // Should we show an explanation?
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this, entry.getKey())) {
-                    ShowAlert(entry.getValue(), new Runnable() {
-                        @Override
-                        public void run() {
-                            // Ask the user for that permission and return
-                            // `checkForPermissionAndRun` will be called again in the permission delegate method
-                            // @see onRequestPermissionsResult
-                            ActivityCompat.requestPermissions(ProductActivity.this, new String[]{entry.getKey()}, 1);
-                        }
+                    ShowAlert(entry.getValue(), () -> {
+                        // Ask the user for that permission and return
+                        // `checkForPermissionAndRun` will be called again in the permission delegate method
+                        // @see onRequestPermissionsResult
+                        ActivityCompat.requestPermissions(ProductActivity.this, new String[]{entry.getKey()}, 1);
                     });
                     return;
                 }
@@ -169,8 +157,8 @@ public class ProductActivity extends ACMEShopActivity implements View.OnClickLis
      * we do not use the request code as we are treating all our permissions the same way
      * This method will call @see checkForPermissionAndRun if the permission is granted (recursion)
      *
-     * @param requestCode int not used in our case
-     * @param permissions String[] permissions list, one at a time in our implementation
+     * @param requestCode  int not used in our case
+     * @param permissions  String[] permissions list, one at a time in our implementation
      * @param grantResults int[] permissions result, one at a time in our implementation
      */
     @Override

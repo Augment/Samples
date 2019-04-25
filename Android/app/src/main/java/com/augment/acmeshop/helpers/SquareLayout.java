@@ -1,8 +1,9 @@
 package com.augment.acmeshop.helpers;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
+
+import androidx.cardview.widget.CardView;
 
 /**
  * This is a extension of the RelativeLayout that will stay squared
@@ -31,23 +32,23 @@ public class SquareLayout extends CardView {
     /**
      * This will take the smallest of both size to make the square
      *
-     * @param widthMeasureSpec width
+     * @param widthMeasureSpec  width
      * @param heightMeasureSpec height
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
-        int width  = MeasureSpec.getSize(widthMeasureSpec);
+        int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
 
-        if (width > (int)((mScale * height) + 0.5)) {
-            width = (int)((mScale * height) + 0.5);
+        if (width > (int) ((mScale * height) + 0.5)) {
+            width = (int) ((mScale * height) + 0.5);
         } else {
-            height = (int)((width / mScale) + 0.5);
+            height = (int) ((width / mScale) + 0.5);
         }
 
         super.onMeasure(
-                MeasureSpec.makeMeasureSpec(width,  MeasureSpec.EXACTLY),
+                MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY),
                 MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY)
         );
     }
