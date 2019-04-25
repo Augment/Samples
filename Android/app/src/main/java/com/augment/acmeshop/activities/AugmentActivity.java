@@ -277,7 +277,7 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
 
                 if (augmentPlayerSDK == null) return;
 
-                augmentPlayer.takeScreenshot(o -> {
+                augmentPlayer.takeScreenshot((b, o) -> {
 //                    @Override
 //                    public void onScreenshotSaved(final File file) {
 //                        runOnUiThread(new Runnable() {
