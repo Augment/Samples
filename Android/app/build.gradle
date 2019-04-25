@@ -53,4 +53,21 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
 
+
+    /*sdk dependencies*/
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_android_version"
+    api "com.google.ar:core:$version_google_ar_core"
+    api "com.google.ar.sceneform.ux:sceneform-ux:$version_google_ar_core"
+    // Using 1.6.0 because of a dependency issue on google's side.
+    api "com.google.ar.sceneform:assets:1.6.0"
+
+    // Third party
+    implementation "com.google.code.gson:gson:$gson_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$retrofit2_kotlin_coroutines_adapter_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    implementation 'org.rewedigital.katana:katana-core:1.6.0'
+    implementation 'org.rewedigital.katana:katana-android:1.6.1'
 }
