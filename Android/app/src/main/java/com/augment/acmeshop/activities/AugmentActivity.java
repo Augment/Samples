@@ -152,7 +152,11 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
             public void onPageScrollStateChanged(int state) {
             }
         });
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
         initAugmentPlayer();
     }
 
@@ -172,6 +176,9 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
      * Init the Augment Player with our AppKeys and then init the AR view itself
      */
     private void initAugmentPlayer() {
+
+        augmentPlayer.getViews().createLiveViewer();
+        queryAndAddProductToAugmentPlayer();
 
         // Start the AR view and get a callback when the view is ready
 //        final AugmentPlayer augmentPlayer = augmentPlayerSDK.getAugmentPlayer();
@@ -223,7 +230,7 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
                 ShowAlert("This product is not available yet");
 
             } else if (productReceived == null) {
-                Log.d(ACMEShop.TAG, "Product " + product.toString() + " is not available.");
+                Log.e(ACMEShop.TAG, "Product " + product.toString() + " is not available.");
                 hideLoading();
                 ShowAlert("This product is not available yet");
             } else addProductToAugmentedReality(productReceived);

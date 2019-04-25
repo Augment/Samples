@@ -33,10 +33,10 @@
 
         <meta-data
             android:name="@string/augment_sdk_app_id"
-            android:value="e3c6566a2a67fb74c59a5eeb55da176df258fe8fa502cadbeb5ebcdf89515639" />
+            android:value="357fee36746668573ceb2f5957c4869ee1a62a112639bac9b0fae43c7c431692" />
         <meta-data
             android:name="@string/augment_sdk_app_client"
-            android:value="bcf970481cf09db62d7ba0380acb7d54b256157a23398eb64f8b3044cc883ece" />
+            android:value="80ae1420e164e0440d5329067bcdd953e9fa6c63b75c001c06d169a4f11268c5" />
     </application>
 
 </manifest>
