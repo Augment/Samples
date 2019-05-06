@@ -25,6 +25,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
 import kotlin.Unit;
 
 /**
@@ -152,11 +153,6 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
             public void onPageScrollStateChanged(int state) {
             }
         });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
         initAugmentPlayer();
     }
 
@@ -176,9 +172,10 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
      * Init the Augment Player with our AppKeys and then init the AR view itself
      */
     private void initAugmentPlayer() {
-
-        augmentPlayer.getViews().createLiveViewer();
-        queryAndAddProductToAugmentPlayer();
+        augmentPlayer.getViews().createLiveViewer(() -> {
+            queryAndAddProductToAugmentPlayer();
+            return Unit.INSTANCE;
+        });
 
         // Start the AR view and get a callback when the view is ready
 //        final AugmentPlayer augmentPlayer = augmentPlayerSDK.getAugmentPlayer();
