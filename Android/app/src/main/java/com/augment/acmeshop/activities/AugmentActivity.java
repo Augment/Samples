@@ -64,11 +64,11 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
 
         loadingContainer = findViewById(R.id.loadingContainer);
         loadingTextView = findViewById(R.id.loadingTextView);
-        tutorialContainer = findViewById(R.id.tutorialContainer);
         augmentPlayer = ((AugmentPlayerFragment) getSupportFragmentManager().findFragmentById(R.id.augment_player_fragment)).getAugmentPlayer();
-        viewPager = findViewById(R.id.viewpager);
-        pagerTextView = findViewById(R.id.pagerTextView);
-        iGotItButton = findViewById(R.id.iGotItButton);
+//        tutorialContainer = findViewById(R.id.tutorialContainer);
+//        viewPager = findViewById(R.id.viewpager);
+//        pagerTextView = findViewById(R.id.pagerTextView);
+//        iGotItButton = findViewById(R.id.iGotItButton);
         screenshotButton = findViewById(R.id.screenshotButton);
 
         // Get the current product from the previous activity
@@ -87,72 +87,72 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
         screenshotButton.setEnabled(false);
 
         // We are using a basic page adapter to show a multi-page tutorial
-        viewPager.setAdapter(new PagerAdapter() {
-            @Override
-            public Object instantiateItem(ViewGroup container, int position) {
-                LayoutInflater inflater = LayoutInflater.from(AugmentActivity.this);
-                int layoutId = R.layout.tutorial_screen_01;
-                switch (position) {
-                    case 1:
-                        layoutId = R.layout.tutorial_screen_02;
-                        break;
-                    case 2:
-                        layoutId = R.layout.tutorial_screen_03;
-                        break;
-                    case 3:
-                        layoutId = R.layout.tutorial_screen_04;
-                        break;
-                }
-                ViewGroup layout = (ViewGroup) inflater.inflate(layoutId, container, false);
-                container.addView(layout);
-                return layout;
-            }
-
-            @Override
-            public void destroyItem(ViewGroup container, int position, Object object) {
-                container.removeView((View) object);
-            }
-
-            @Override
-            public int getCount() {
-                return 4;
-            }
-
-            @Override
-            public boolean isViewFromObject(View view, Object object) {
-                return view == object;
-            }
-        });
-
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                iGotItButton.setVisibility(View.GONE);
-                switch (position) {
-                    case 0:
-                        pagerTextView.setText(R.string.step_1_4);
-                        break;
-                    case 1:
-                        pagerTextView.setText(R.string.step_2_4);
-                        break;
-                    case 2:
-                        pagerTextView.setText(R.string.step_3_4);
-                        break;
-                    case 3:
-                        pagerTextView.setText(R.string.step_4_4);
-                        iGotItButton.setVisibility(View.VISIBLE);
-                        break;
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-            }
-        });
+//        viewPager.setAdapter(new PagerAdapter() {
+//            @Override
+//            public Object instantiateItem(ViewGroup container, int position) {
+//                LayoutInflater inflater = LayoutInflater.from(AugmentActivity.this);
+//                int layoutId = R.layout.tutorial_screen_01;
+//                switch (position) {
+//                    case 1:
+//                        layoutId = R.layout.tutorial_screen_02;
+//                        break;
+//                    case 2:
+//                        layoutId = R.layout.tutorial_screen_03;
+//                        break;
+//                    case 3:
+//                        layoutId = R.layout.tutorial_screen_04;
+//                        break;
+//                }
+//                ViewGroup layout = (ViewGroup) inflater.inflate(layoutId, container, false);
+//                container.addView(layout);
+//                return layout;
+//            }
+//
+//            @Override
+//            public void destroyItem(ViewGroup container, int position, Object object) {
+//                container.removeView((View) object);
+//            }
+//
+//            @Override
+//            public int getCount() {
+//                return 4;
+//            }
+//
+//            @Override
+//            public boolean isViewFromObject(View view, Object object) {
+//                return view == object;
+//            }
+//        });
+//
+//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//                iGotItButton.setVisibility(View.GONE);
+//                switch (position) {
+//                    case 0:
+//                        pagerTextView.setText(R.string.step_1_4);
+//                        break;
+//                    case 1:
+//                        pagerTextView.setText(R.string.step_2_4);
+//                        break;
+//                    case 2:
+//                        pagerTextView.setText(R.string.step_3_4);
+//                        break;
+//                    case 3:
+//                        pagerTextView.setText(R.string.step_4_4);
+//                        iGotItButton.setVisibility(View.VISIBLE);
+//                        break;
+//                }
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//            }
+//        });
         initAugmentPlayer();
     }
 
@@ -316,10 +316,10 @@ public class AugmentActivity extends ACMEShopActivity implements View.OnClickLis
                 augmentPlayer.recenterProducts();
                 break;
 
-            case R.id.iGotItButton:
-                tutorialContainer.setVisibility(View.GONE);
-                viewPager.setCurrentItem(0);
-                break;
+//            case R.id.iGotItButton:
+//                tutorialContainer.setVisibility(View.GONE);
+//                viewPager.setCurrentItem(0);
+//                break;
         }
     }
 
