@@ -16,6 +16,10 @@ allprojects {
         jcenter()
         google()
         mavenLocal()
+        maven {
+            // Augment Player SDK repository
+            url "https://dl.bintray.com/augment/augment"
+        }
     }
 }
 

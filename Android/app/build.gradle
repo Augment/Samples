@@ -27,13 +27,6 @@ android {
     }
 }
 
-repositories {
-    maven {
-        // Augment Player SDK repository
-        url "https://dl.bintray.com/augment/augment"
-    }
-}
-
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
@@ -43,7 +36,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     // Augment Player SDK
-    implementation "com.ar.augment:augment-player-sdk:2.0.0-alpha1"
+    implementation "com.ar.augment:augment-player-sdk:2.0.0-alpha2"
 
     implementation "androidx.appcompat:appcompat:1.0.2"
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
