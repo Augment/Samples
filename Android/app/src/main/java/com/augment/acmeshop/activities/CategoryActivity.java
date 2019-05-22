@@ -3,8 +3,6 @@ package com.augment.acmeshop.activities;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,6 +21,10 @@ import com.augment.acmeshop.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class CategoryActivity extends ACMEShopActivity {
 
     RecyclerView recyclerView;
@@ -37,7 +39,7 @@ public class CategoryActivity extends ACMEShopActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
 
         layoutManager = new GridLayoutManager(this, 2);
         gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
@@ -100,7 +102,7 @@ public class CategoryActivity extends ACMEShopActivity {
         }
 
         @Override
-        public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+        public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
 
         }
 
@@ -127,18 +129,19 @@ public class CategoryActivity extends ACMEShopActivity {
             return categories.size();
         }
 
+        @NonNull
         @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.grid_item_category, parent, false);
             ViewHolder holder = new ViewHolder(view);
-            holder.categoryImageView     = (ImageView) view.findViewById(R.id.categoryImageView);
-            holder.categoryTitleTextView = (TextView) view.findViewById(R.id.categoryTitleTextView);
+            holder.categoryImageView     = view.findViewById(R.id.categoryImageView);
+            holder.categoryTitleTextView = view.findViewById(R.id.categoryTitleTextView);
             return holder;
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             final Category category = categories.get(position);
 
             int res = getResources().getIdentifier(category.getPicture(), "drawable", getPackageName());
